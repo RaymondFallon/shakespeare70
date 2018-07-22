@@ -1,0 +1,19 @@
+= form_for @production do |f|
+  - if @production.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@production.errors.count, "error")} prohibited this production from being saved:"
+      %ul
+        - @production.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :start_date
+    = f.date_select :start_date
+  .field
+    = f.label :end_date
+    = f.date_select :end_date
+  .actions
+    = f.submit 'Save'

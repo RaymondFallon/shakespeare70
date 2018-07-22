@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+PositionType.where(code: 'A', description: 'Actor').first_or_create!
+PositionType.where(code: 'PS', description: 'Production Staff').first_or_create!
