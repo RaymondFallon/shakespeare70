@@ -1,0 +1,26 @@
+#s70-header {
+  position: sticky;
+  top: 0;
+  z-index: 9786;
+  width: 100%;
+  max-width: none;
+
+  background-color: lightgrey;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 0 1em;
+  line-height: 3em;
+
+  text-align: right;
+}
+
+nav ul {
+  display: block;
+  text-align: right;
+}
+
+#main-navigation {
+  margin-left: auto;
+}

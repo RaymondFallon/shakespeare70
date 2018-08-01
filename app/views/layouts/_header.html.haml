@@ -1,3 +1,11 @@
-%header#s70-header
-  #header-inner
-    %ol
+%header.navbar.container#s70-header
+  #header-inner.row.justify-between
+    %div.h2.permanent-marker SHAKESPEARE '70
+    %nav.row#main-navigation
+      %ul
+        %li.collection.nav-item.inline-block Community
+        %li.collection.nav-item.inline-block Coming Soon
+        %li.collection.nav-item.inline-block= link_to 'Bios', members_path
+        %li.collection.nav-item.inline-block= link_to 'Past Shows', productions_path
+        %li.collection.nav-item.inline-block Donate
+
