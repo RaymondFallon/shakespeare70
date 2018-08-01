@@ -1,9 +1,21 @@
+- content_for :title, "#{@member.name} | "
 %p#notice= notice
 
-%p
-  %b Name:
-  = @member.name
+.container
+  .row.justify-content-sm-center
+    .card.col-sm-11
+      .card-body
+        .row.justify-content-sm-center
+          .col-sm-6
+            =image_tag @member.photo_url, class: 'card-img-top',
+                                  alt: "#{@member.name} Headshot",
+                                  style: 'width:400px'
+          .col-sm-6
+            %h1.permanent-marker.card-title.text-center= @member.name
+            %p.poppins.card-text= @member.bio.html_safe
 
-= link_to 'Edit', edit_member_path(@member)
-\|
-= link_to 'Back', members_path
+
+%nav
+  = link_to 'Edit', edit_member_path(@member)
+  \|
+  = link_to 'Back', members_path

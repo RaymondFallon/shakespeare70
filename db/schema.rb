@@ -10,14 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180722160029) do
+ActiveRecord::Schema.define(version: 20180722161211) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "members", force: :cascade do |t|
     t.string "name"
+    t.string "title"
+    t.string "photo_url"
     t.text "bio"
+    t.string "current_season"
+    t.string "s70_credits"
+    t.string "other_credits"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -45,6 +50,16 @@ ActiveRecord::Schema.define(version: 20180722160029) do
     t.string "title"
     t.date "start_date"
     t.date "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "venues", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "zipcode", limit: 5
+    t.text "description"
+    t.string "external_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
