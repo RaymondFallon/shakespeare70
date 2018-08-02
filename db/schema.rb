@@ -10,10 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180722161211) do
+ActiveRecord::Schema.define(version: 20180802020620) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bio_types", force: :cascade do |t|
+    t.string "code"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "castings", force: :cascade do |t|
+    t.bigint "member_id"
+    t.bigint "production_id"
+    t.bigint "position_id"
+    t.bigint "bio_type_id"
+    t.string "role"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bio_type_id"], name: "index_castings_on_bio_type_id"
+    t.index ["member_id"], name: "index_castings_on_member_id"
+    t.index ["position_id"], name: "index_castings_on_position_id"
+    t.index ["production_id"], name: "index_castings_on_production_id"
+  end
+
+  create_table "companies", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "members", force: :cascade do |t|
     t.string "name"
@@ -27,23 +54,11 @@ ActiveRecord::Schema.define(version: 20180722161211) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "position_types", force: :cascade do |t|
+  create_table "positions", force: :cascade do |t|
     t.string "code"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "positions", force: :cascade do |t|
-    t.bigint "member_id"
-    t.bigint "production_id"
-    t.bigint "position_type_id"
-    t.string "role"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["member_id"], name: "index_positions_on_member_id"
-    t.index ["position_type_id"], name: "index_positions_on_position_type_id"
-    t.index ["production_id"], name: "index_positions_on_production_id"
   end
 
   create_table "productions", force: :cascade do |t|

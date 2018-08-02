@@ -1,6 +1,6 @@
-class CreatePositionTypes < ActiveRecord::Migration[5.1]
+class CreateBioTypes < ActiveRecord::Migration[5.1]
   def change
-    create_table :position_types do |t|
+    create_table :bio_types do |t|
       t.string :code
       t.string :description
 

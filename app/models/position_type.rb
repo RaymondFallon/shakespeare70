@@ -1,2 +1,0 @@
-class PositionType < ApplicationRecord
-end

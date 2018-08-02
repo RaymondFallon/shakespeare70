@@ -12,6 +12,11 @@
   color: black;
 }
 
+#header-inner {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .h2 a:hover{
   background-color: transparent;
   text-decoration: none;
@@ -41,4 +46,5 @@ nav ul li a:hover {
 
 #main-navigation {
   margin-left: auto;
+  margin-right: 25px;
 }

@@ -1,0 +1,2 @@
+class BioType < ApplicationRecord
+end

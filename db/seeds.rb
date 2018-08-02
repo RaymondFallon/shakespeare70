@@ -6,8 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-PositionType.where(code: 'A', description: 'Actor').first_or_create!
-PositionType.where(code: 'PS', description: 'Production Staff').first_or_create!
+Company.where(name: "Shakespeare '70'").first_or_create!
+
+Position.where(code: 'A', description: 'Actor').first_or_create!
+Position.where(code: 'D', description: 'Director').first_or_create!
+Position.where(code: 'AD', description: 'Assistant Director').first_or_create!
+Position.where(code: 'SM', description: 'Stage Manager').first_or_create!
+Position.where(code: 'ASM', description: 'Assistant Stage Manager').first_or_create!
+
+BioType.where(code: 'TS', description: 'This Season').first_or_create!
+BioType.where(code: 'S70', description: 'Shakespeare 70').first_or_create!
+BioType.where(code: 'OC', description: 'Other Company').first_or_create!
+BioType.where(code: 'NF', description: 'Not Featured').first_or_create!
 
 Venue.where(name: 'Kelsey Theatre')
      .first_or_create!(address: "1200 Old Trenton Road,
