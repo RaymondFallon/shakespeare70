@@ -1,6 +1,9 @@
 %header#s70-header
   #header-inner.row.justify-between
-    %div.h2.ml-3.permanent-marker#s70-logo=link_to "SHAKESPEARE '70", root_path
+    %div.h2.ml-3.permanent-marker#s70-logo
+      -#=link_to "SHAKESPEARE '70", root_path
+      %a{href: root_path}
+        =image_tag image_path('S70logo.png')
     %nav.row#main-navigation
       %ul
         %li.collection.nav-item.inline-block Community
