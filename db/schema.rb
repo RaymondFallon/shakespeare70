@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180802020620) do
+ActiveRecord::Schema.define(version: 20180802020134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,10 +63,13 @@ ActiveRecord::Schema.define(version: 20180802020620) do
 
   create_table "productions", force: :cascade do |t|
     t.string "title"
+    t.bigint "company_id"
     t.date "start_date"
     t.date "end_date"
+    t.integer "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_productions_on_company_id"
   end
 
   create_table "venues", force: :cascade do |t|
@@ -79,4 +82,5 @@ ActiveRecord::Schema.define(version: 20180802020620) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "productions", "companies"
 end

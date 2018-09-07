@@ -60,7 +60,7 @@ Venue.where(name: 'Open Arts PAC')
                                  Bordentown Township, NJ 08505",
                        zipcode: '08505',
                        external_url: 'https://www.openartspac.org/',
-                       description: "Bordentown's Open Arts PAC is [...]")
+                       description: "Bordentown's Open Arts PAC is one heck of a [...]")
 
 Production.where(company: s70, title: 'Clybourne Park', year: 2018).first_or_create!
 Production.where(company: s70, title: 'The Merry Wives of Windsor', year: 2018).first_or_create!

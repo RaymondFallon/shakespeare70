@@ -62,13 +62,17 @@ class ProductionsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_production
-      @production = Production.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_production
+    @production = Production.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def production_params
-      params.require(:production).permit(:title, :start_date, :end_date)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def production_params
+    params.require(:production).permit(:title, :start_date, :end_date, :member_id)
+  end
+
+  def member_param
+    params.require(:member_id)
+  end
 end
