@@ -10,30 +10,27 @@
                                 style: 'width:400px'
           %h1.permanent-marker.card-title.text-right
             = '- ' + @member.name
-          %p.text-center= @member.title
+          %p.permanent-marker.text-right= @member.title
         .col-sm-12.col-lg-6
           %p.poppins.card-text.text-center= @member.bio.html_safe
           %h5.permanent-marker.text-center This Season
-          %ul
+          %ul.casting-list
             - @member.castings.this_season.each do |casting|
               %li
-                %p
-                  %strong #{casting.production.title}:
-                  = casting.role
+                %strong #{casting.production.title}:
+                = casting.role
           %h5.permanent-marker.text-center With S'70
-          %ul
+          %ul.casting-list
             - @member.castings.with_s70.each do |casting|
               %li
-                %p
-                  %strong #{casting.production.title}:
-                  = casting.role
+                %strong #{casting.production.title}:
+                = casting.role
           %h5.permanent-marker.text-center Other Companies
-          %ul
+          %ul.casting-list
             - @member.castings.with_others.each do |casting|
               %li
-                %p
-                  %strong #{casting.production.title}:
-                  = casting.role
+                %strong #{casting.production.title}:
+                #{casting.role} (#{casting.production.company.name})
 
 
 %nav

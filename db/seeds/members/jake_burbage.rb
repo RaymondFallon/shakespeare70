@@ -35,9 +35,9 @@ co_dir = Position.where(code: 'CO', description: 'Co-Director').first_or_create!
     [act, oc_bt, actor, 'Proof', 'Robert']
 ].each do |casting|
   Casting.where(member: jake,
-                production: Production.where(company: casting[0], title: casting[4]).first_or_create!,
+                production: Production.where(company: casting[0], title: casting[3]).first_or_create!,
                 position: casting[2],
                 bio_type: casting[1],
-                role: casting[5]
+                role: casting[4]
   ).first_or_create!
 end

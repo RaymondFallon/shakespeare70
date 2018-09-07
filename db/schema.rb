@@ -43,13 +43,12 @@ ActiveRecord::Schema.define(version: 20180802020134) do
   end
 
   create_table "members", force: :cascade do |t|
-    t.string "name"
+    t.string "first_name"
+    t.string "last_name"
     t.string "title"
+    t.string "exec_committee", limit: 1
     t.string "photo_url"
     t.text "bio"
-    t.string "current_season"
-    t.string "s70_credits"
-    t.string "other_credits"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
