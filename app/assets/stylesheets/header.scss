@@ -5,11 +5,11 @@
   width: 100%;
   max-width: none;
 
-  background-color: lightgrey;
+  background-color: black;
 }
 
 #header-inner .h2 a{
-  color: black;
+  color: goldenrod;
 }
 
 #header-inner {
@@ -26,6 +26,7 @@ nav ul {
   display: block;
   text-align: right;
   margin-bottom: 0;
+  color: goldenrod;
 }
 
 nav ul li {
@@ -37,11 +38,11 @@ nav ul li {
 }
 
 nav ul li a:visited {
-  color: black;
+  color: goldenrod;
 }
 
 nav ul li a:hover {
-  background-color: darkgoldenrod;
+  background-color: lightblue;
   text-decoration: none;
 }
 

@@ -2,16 +2,15 @@
 
 .container#member-show-container
   .row.justify-content-sm-center
-    .card.col-sm-11
-      .card-body
-        .row.justify-content-sm-center
-          .col-sm-10.offset-sm-1.col-lg-6.offset-lg-0
-            =image_tag @member.photo_url, class: 'card-img-top',
-                                  alt: "#{@member.name} Headshot",
-                                  style: 'width:400px'
-          .col-sm-12.col-lg-6
-            %h1.permanent-marker.card-title.text-center= @member.name
-            %p.poppins.card-text= @member.bio.html_safe
+    .col-sm-11
+      .row.justify-content-sm-center
+        .col-sm-10.offset-sm-1.col-lg-6.offset-lg-0
+          =image_tag @member.photo_url, class: 'card-img-top',
+                                alt: "#{@member.name} Headshot",
+                                style: 'width:400px'
+        .col-sm-12.col-lg-6
+          %h1.permanent-marker.card-title.text-center= @member.name
+          %p.poppins.card-text= @member.bio.html_safe
 
 
 %nav

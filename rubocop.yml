@@ -1,0 +1,22 @@
+AllCops:
+  TargetRubyVersion: 2.4
+  Exclude:
+    - bin/*
+    - config/initializers/devise.rb
+    - db/**/*
+    - spec/*_helper.rb
+    - config/**/*
+Metrics/LineLength:
+  Max: 120
+  # To make it possible to copy or click on URIs in the code, we allow lines
+  # contaning a URI to be longer than Max.
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+Metrics/AbcSize:
+  Max: 20
+Style/Documentation:
+  Enabled: false
+Rails:
+  Enabled: true

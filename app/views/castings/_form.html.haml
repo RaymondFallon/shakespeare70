@@ -1,0 +1,35 @@
+= form_for @casting do |f|
+  - if @casting.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@member.errors.count, "error")} prohibited this casting from being saved:"
+      %ul
+        - @casting.errors.full_messages.each do |message|
+          %li= message
+  = f.hidden_field :member_id, value: @member.id
+  .row
+    .form-group.col-xs-12.col-md-4{class: error_class(f.object, :name)}
+      = f.label :name, 'Name of Role'
+      = f.text_field :name
+  .row
+    .form-group.col-xs-12.col-md-4{class: error_class(f.object, :position)}
+      = f.label :position_id, 'Position'
+      = f.collection_select(:position_id,
+                              Position.all, :id, :name,
+                              { prompt: true, selected: f.object.position&.id },
+                              class: 'form-control')
+      = error_field(f.object, :position)
+  .row
+    .form-group.col-xs-12.col-md-4{class: error_class(f.object, :production)}
+      = f.label :production_id, 'Production'
+      = f.collection_select(:production_id,
+                              Production.all, :id, :title,
+                              { prompt: true, selected: f.object.production&.id },
+                              class: 'form-control')
+      = error_field(f.object, :production)
+  .row
+    .form-group.col-xs-12.col-md-4{class: error_class(f.object, :role)}
+      = f.label :role
+      = f.text_field :role
+      = error_field(f.object, :role)
+  .actions
+    = f.submit 'Save'
