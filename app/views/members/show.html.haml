@@ -2,35 +2,33 @@
 
 .container#member-show-container
   .row.justify-content-sm-center
-    .col-sm-11
-      .row.justify-content-sm-center
-        .col-sm-10.offset-sm-1.col-lg-6.offset-lg-0
-          =image_tag @member.photo_url, class: 'card-img-top',
-                                alt: "#{@member.name} Headshot",
-                                style: 'width:400px'
-          %h1.permanent-marker.card-title.text-right
-            = '- ' + @member.name
-          %p.permanent-marker.text-right= @member.title
-        .col-sm-12.col-lg-6
-          %p.poppins.card-text.text-center= @member.bio.html_safe
-          %h5.permanent-marker.text-center This Season
-          %ul.casting-list
-            - @member.castings.this_season.each do |casting|
-              %li
-                %strong #{casting.production.title}:
-                = casting.role
-          %h5.permanent-marker.text-center With S'70
-          %ul.casting-list
-            - @member.castings.with_s70.each do |casting|
-              %li
-                %strong #{casting.production.title}:
-                = casting.role
-          %h5.permanent-marker.text-center Other Companies
-          %ul.casting-list
-            - @member.castings.with_others.each do |casting|
-              %li
-                %strong #{casting.production.title}:
-                #{casting.role} (#{casting.production.company.name})
+    .row.justify-content-sm-center
+      .col-sm-10.offset-sm-1.col-lg-5.offset-lg-0
+        =image_tag @member.photo_url, class: 'img-fluid img-thumbnail',
+                              alt: "#{@member.name} Headshot"
+        %h1.permanent-marker.card-title.text-right
+          = '- ' + @member.name
+        %p.permanent-marker.text-right= @member.title
+      .col-sm-12.col-lg-7
+        %p.poppins.card-text.text-center= @member.bio.html_safe
+        %h5.permanent-marker This Season
+        %ul.casting-list
+          - @member.castings.this_season.each do |casting|
+            %li
+              %strong #{casting.production.title}:
+              = casting.role
+        %h5.permanent-marker With S'70
+        %ul.casting-list
+          - @member.castings.with_s70.each do |casting|
+            %li
+              %strong #{casting.production.title}:
+              = casting.role
+        %h5.permanent-marker Other Companies
+        %ul.casting-list
+          - @member.castings.with_others.each do |casting|
+            %li
+              %strong #{casting.production.title}:
+              #{casting.role} (#{casting.production.company.name})
 
 
 %nav
