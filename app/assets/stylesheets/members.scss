@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$deep-grey: #4F4F4F;
+$deep-grey: #646464;
 
 h1, h2, h3, h4, h5 {
   font-family: 'Permanent Marker', serif;
@@ -15,6 +15,10 @@ h1, h2, h3, h4, h5 {
 .poppins {
   font-family: 'Poppins', verdana, arial, helvetica, serif;
   color: $deep-grey;
+
+  strong {
+    color: black;
+  }
 }
 
 #member-show-container {

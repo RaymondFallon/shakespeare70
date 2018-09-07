@@ -12,23 +12,25 @@
       .col-sm-12.col-lg-7
         %p.poppins.card-text.text-center= @member.bio.html_safe
         %h5.permanent-marker This Season
-        %ul.casting-list
+        %ul
           - @member.castings.this_season.each do |casting|
-            %li
+            %li.poppins
               %strong #{casting.production.title}:
               = casting.role
         %h5.permanent-marker With S'70
-        %ul.casting-list
+        %ul
           - @member.castings.with_s70.each do |casting|
-            %li
+            -# TODO: Extract this to a casting_row helper method
+            %li.poppins
               %strong #{casting.production.title}:
               = casting.role
         %h5.permanent-marker Other Companies
-        %ul.casting-list
+        %ul
           - @member.castings.with_others.each do |casting|
-            %li
+            %li.poppins
               %strong #{casting.production.title}:
-              #{casting.role} (#{casting.production.company.name})
+              #{casting.role}
+              %strong (#{casting.production.company.name})
 
 
 %nav
