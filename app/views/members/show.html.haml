@@ -8,9 +8,32 @@
           =image_tag @member.photo_url, class: 'card-img-top',
                                 alt: "#{@member.name} Headshot",
                                 style: 'width:400px'
+          %h1.permanent-marker.card-title.text-right
+            = '- ' + @member.name
+          %p.text-center= @member.title
         .col-sm-12.col-lg-6
-          %h1.permanent-marker.card-title.text-center= @member.name
-          %p.poppins.card-text= @member.bio.html_safe
+          %p.poppins.card-text.text-center= @member.bio.html_safe
+          %h5.permanent-marker.text-center This Season
+          %ul
+            - @member.castings.this_season.each do |casting|
+              %li
+                %p
+                  %strong #{casting.production.title}:
+                  = casting.role
+          %h5.permanent-marker.text-center With S'70
+          %ul
+            - @member.castings.with_s70.each do |casting|
+              %li
+                %p
+                  %strong #{casting.production.title}:
+                  = casting.role
+          %h5.permanent-marker.text-center Other Companies
+          %ul
+            - @member.castings.with_others.each do |casting|
+              %li
+                %p
+                  %strong #{casting.production.title}:
+                  = casting.role
 
 
 %nav

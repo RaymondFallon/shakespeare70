@@ -5,6 +5,13 @@ class CastingsController < ApplicationController
   end
 
   def create
+    @casting = Casting.new(casting_params)
+    if @casting.save
+      flash[:success] = 'This role has been successfully added.'
+      return redirect_to members_path(@casting.member_id)
+    end
+    flash[:error] = 'Nahhh bra, didnt work'
+    redirect_to members_path(id: member_param)
   end
 
   def destroy
