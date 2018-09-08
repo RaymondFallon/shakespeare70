@@ -33,10 +33,3 @@
               %em{style:'color:black;'} #{casting.production.title}:
               #{casting.role}
               %strong (#{casting.production.company.name})
-
-%nav
-  = link_to 'Edit', edit_member_path(@member)
-  \|
-  = link_to 'Back', members_path
-  \|
-  = link_to 'Add a Role', new_member_casting_path(member_id: @member.id)
