@@ -29,3 +29,14 @@ h1, h2, h3, h4, h5 {
 .rounded-2r {
   border-radius: 2rem !important;
 }
+
+a.member-card {
+  color: black;
+}
+
+a.member-card:hover {
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  box-shadow: 5px 5px 3px grey;
+}
