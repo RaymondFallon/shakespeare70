@@ -26,6 +26,7 @@ Company.where(name: 'TCNJ Musical Theatre').first_or_create!
 Position.where(code: 'A', description: 'Actor').first_or_create!
 Position.where(code: 'AD', description: 'Assistant Director').first_or_create!
 Position.where(code: 'ASM', description: 'Assistant Stage Manager').first_or_create!
+Position.where(code: 'APM', description: 'Assistant Production Manager').first_or_create!
 Position.where(code: 'CO', description: 'Co-Director').first_or_create!
 Position.where(code: 'D', description: 'Director').first_or_create!
 Position.where(code: 'LD', description: 'Lighting Designer').first_or_create!

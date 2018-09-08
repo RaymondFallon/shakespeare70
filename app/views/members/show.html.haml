@@ -2,36 +2,34 @@
 
 .container#member-show-container
   .row.justify-content-sm-center
-    .row.justify-content-sm-center
-      .col-sm-10.offset-sm-1.col-lg-5.offset-lg-0
-        =image_tag @member.photo_url, class: 'img-fluid img-thumbnail',
-                              alt: "#{@member.name} Headshot"
-        %h1.permanent-marker.card-title.text-right
-          = '- ' + @member.name
-        %p.permanent-marker.text-right= @member.title
-      .col-sm-12.col-lg-7
-        %p.poppins.card-text.text-center= @member.bio.html_safe
-        %h5.permanent-marker This Season
-        %ul
-          - @member.castings.this_season.each do |casting|
-            %li.poppins
-              %strong #{casting.production.title}:
-              = casting.role
-        %h5.permanent-marker With S'70
-        %ul
-          - @member.castings.with_s70.each do |casting|
-            -# TODO: Extract this to a casting_row helper method
-            %li.poppins
-              %strong #{casting.production.title}:
-              = casting.role
-        %h5.permanent-marker Other Companies
-        %ul
-          - @member.castings.with_others.each do |casting|
-            %li.poppins
-              %strong #{casting.production.title}:
-              #{casting.role}
-              %strong (#{casting.production.company.name})
-
+    .col-sm-10.offset-sm-1.col-lg-5.offset-lg-0
+      =image_tag @member.photo_url, class: 'img-fluid rounded-2r img-thumbnail',
+                            alt: "#{@member.name} Headshot"
+      %h1.permanent-marker.card-title.text-right
+        = '- ' + @member.name
+      %p.permanent-marker.text-right= @member.title
+    .col-sm-12.col-lg-7
+      %p.poppins.card-text.text-center= @member.bio.html_safe
+      %h5.permanent-marker This Season
+      %ul
+        - @member.castings.this_season.each do |casting|
+          %li.poppins
+            %em{style:'color:black;'} #{casting.production.title}:
+            = casting.role
+      %h5.permanent-marker With S'70
+      %ul
+        - @member.castings.with_s70.each do |casting|
+          -# TODO: Extract this to a casting_row helper method
+          %li.poppins
+            %em{style:'color:black;'} #{casting.production.title}:
+            = casting.role
+      %h5.permanent-marker Other Companies
+      %ul
+        - @member.castings.with_others.each do |casting|
+          %li.poppins
+            %em{style:'color:black;'} #{casting.production.title}:
+            #{casting.role}
+            %strong (#{casting.production.company.name})
 
 %nav
   = link_to 'Edit', edit_member_path(@member)
