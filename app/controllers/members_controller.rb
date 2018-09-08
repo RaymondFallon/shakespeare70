@@ -2,7 +2,7 @@ class MembersController < ApplicationController
   before_action :set_member, only: [:show, :edit, :update, :destroy]
 
   def index
-    @members = Member.all.order(:last_name, :first_name)
+    @members = Member.featured.order(:last_name, :first_name)
   end
 
   def show

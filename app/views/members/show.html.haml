@@ -9,13 +9,13 @@
         = '- ' + @member.name
       %p.permanent-marker.text-right= @member.title
     .col-sm-12.col-lg-7
-      %p.poppins.card-text.text-center= @member.bio.html_safe
+      %p.poppins.card-text.text-center= @member.bio&.html_safe
       - if @member.castings.this_season.any?
         %h5.permanent-marker This Season
         %ul
           - @member.castings.this_season.each do |casting|
             %li.poppins
-              %em{style:'color:black;'} #{casting.production.title}:
+              %em= link_to "#{casting.production.title}:", casting.production, class: 'black no-decoration hover-shadow'
               = casting.role
       - if @member.castings.with_s70.any?
         %h5.permanent-marker With S'70
@@ -23,7 +23,7 @@
           - @member.castings.with_s70.each do |casting|
             -# TODO: Extract this to a casting_row helper method
             %li.poppins
-              %em{style:'color:black;'} #{casting.production.title}:
+              %em= link_to "#{casting.production.title}:", casting.production, class: 'black no-decoration hover-shadow'
               = casting.role
       - if @member.castings.with_others.any?
         %h5.permanent-marker Other Companies

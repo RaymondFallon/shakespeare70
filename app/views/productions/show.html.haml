@@ -1,1 +1,13 @@
-DIDN'T BUILD IT YET, OK??
+
+.text-center.mt-3.mb-3.permanent-marker
+  %h1= @production.title
+
+.container-fluid
+  .row
+    .col-xs-12.col-md-6.col-lg-4.text-center
+      %p= @production.description&.html_safe
+    .col-xs-12.col-md-6.col-lg-4
+      = image_tag @production.poster, class: 'img-fluid', alt: "#{@production.title} Poster"
+    .col-xs-12.col-md-6.col-lg-4.text-center
+      .btn.btn-primary Purchase Tickets
+      = render partial: 'cast_list', locals: { production: @production }

@@ -4,6 +4,7 @@
 
 kayla = Member.where(first_name: 'Kayla', last_name: 'Elizabeth')
               .first_or_create!(exec_committee: 'Y',
+                                featured: 'Y',
                                 title: 'Actor • Production Staff',
                                 bio: "Kayla Elizabeth earned her B.F.A. in Acting & Directing in 2007 from the University of Rhode Island. In addition to her training there, she has completed Shakespeare intensives at The Gamm theater in Rhode Island and Film & TV intensives at The Actor's Green Room in New York. Kayla's first appearance with Shakespeare '70 was in the 2016 production of \"Hedda Gabler\".")
 s70 = Company.where(name: "Shakespeare '70").first_or_create!
@@ -32,6 +33,5 @@ director = Position.where(code: 'D', description: 'Director').first_or_create!
   Casting.where(member: kayla,
                 production: Production.where(company: casting[0], title: casting[3]).first_or_create!,
                 position: casting[2],
-                bio_type: casting[1],
-                role: casting[4]).first_or_create!
+                bio_type: casting[1]).first_or_create!(role: casting[4])
 end

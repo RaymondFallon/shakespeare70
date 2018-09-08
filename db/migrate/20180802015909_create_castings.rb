@@ -6,6 +6,7 @@ class CreateCastings < ActiveRecord::Migration[5.1]
       t.references :position
       t.references :bio_type
       t.string :role
+      t.integer :cast_order, limit: 3
 
       t.timestamps
     end

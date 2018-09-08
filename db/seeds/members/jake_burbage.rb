@@ -4,6 +4,7 @@
 
 jake = Member.where(first_name: 'Jake', last_name: 'Burbage')
              .first_or_create!(title: 'Actor • Director',
+                               featured: 'Y',
                                # photo_url: 'https://yt3.ggpht.com/a-/ACSszfE94huZs48otiSDNm2yafYZbu06ephpiBN0rw=s900-mo-c-c0xffffffff-rj-k-no',
                                bio: "Jake has been acting for the last 20 years on both the stage and screen. As a child, he starred in the television sitcom \"Grounded For Life\" from 2000-2004, and voiced the role of Benny the Bull on Nickelodeon's \"Dora the Explorer\".  Jake currently acts on and writes for the Amazon web series \"Nuke City\", and will soon be seen co-anchoring a new political talk show satire entitled \"Fake News Nightly,\" premiering in 2019. He is a member of SAG-AFTRA and Actors Equity. He made his first appearance with Shakespeare '70 in their 2014 summer production of Much Ado About Nothing.")
 s70 = Company.where(name: "Shakespeare '70").first_or_create!
@@ -21,8 +22,6 @@ actor = Position.where(code: 'A', description: 'Actor').first_or_create!
 co_dir = Position.where(code: 'CO', description: 'Co-Director').first_or_create!
 
 [
-    [s70, ts_bt, actor, 'Clybourne Park', 'Karl/Steve'],
-
     [s70, s70_bt, co_dir, 'Murder Most Foul: An Evening of Shakespeare'],
     [s70, s70_bt, actor, 'Hamlet', 'Laertes'],
     [s70, s70_bt, actor, 'Much Ado About Nothing', 'Borachio'],
@@ -37,6 +36,5 @@ co_dir = Position.where(code: 'CO', description: 'Co-Director').first_or_create!
   Casting.where(member: jake,
                 production: Production.where(company: casting[0], title: casting[3]).first_or_create!,
                 position: casting[2],
-                bio_type: casting[1],
-                role: casting[4]).first_or_create!
+                bio_type: casting[1]).first_or_create!(role: casting[4])
 end

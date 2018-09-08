@@ -3,6 +3,8 @@
 class Member < ApplicationRecord
   has_many :castings
 
+  scope :featured, -> { where(featured: 'Y') }
+
   def name
     first_name + ' ' + last_name
   end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180802020134) do
+ActiveRecord::Schema.define(version: 20180802015909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20180802020134) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["code"], name: "index_bio_types_on_code", unique: true
   end
 
   create_table "castings", force: :cascade do |t|
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 20180802020134) do
     t.bigint "position_id"
     t.bigint "bio_type_id"
     t.string "role"
+    t.integer "cast_order"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["bio_type_id"], name: "index_castings_on_bio_type_id"
@@ -47,6 +49,7 @@ ActiveRecord::Schema.define(version: 20180802020134) do
     t.string "last_name"
     t.string "title"
     t.string "exec_committee", limit: 1
+    t.string "featured", limit: 1
     t.string "photo_url"
     t.text "bio"
     t.datetime "created_at", null: false
@@ -56,19 +59,24 @@ ActiveRecord::Schema.define(version: 20180802020134) do
   create_table "positions", force: :cascade do |t|
     t.string "code"
     t.string "description"
+    t.integer "bio_order"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["code"], name: "index_positions_on_code", unique: true
   end
 
   create_table "productions", force: :cascade do |t|
     t.string "title"
     t.bigint "company_id"
+    t.bigint "venue_id"
     t.date "start_date"
     t.date "end_date"
     t.integer "year"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["company_id"], name: "index_productions_on_company_id"
+    t.index ["venue_id"], name: "index_productions_on_venue_id"
   end
 
   create_table "venues", force: :cascade do |t|
@@ -82,4 +90,5 @@ ActiveRecord::Schema.define(version: 20180802020134) do
   end
 
   add_foreign_key "productions", "companies"
+  add_foreign_key "productions", "venues"
 end

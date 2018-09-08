@@ -14,3 +14,22 @@ main {
 .page-photo {
   width: 100%;
 }
+
+.no-decoration {
+  text-decoration: none !important;
+}
+.no-decoration:hover {
+  text-decoration: none !important;
+  background-color: transparent !important;
+}
+
+.black {
+  color: black !important;
+}
+.black:hover {
+  color: black !important;
+}
+
+.hover-shadow:hover {
+  text-shadow: 1px 1px lightgrey;
+}

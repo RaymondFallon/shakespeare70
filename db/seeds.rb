@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-Dir[Rails.root.join('db/seeds/*/**')].each { |f| require f }
-
 s70 = Company.where(name: "Shakespeare '70").first_or_create!
 Company.where(name: 'ActorsNET of Bucks County').first_or_create!
 Company.where(name: 'Algonquin Arts').first_or_create!
@@ -23,82 +21,26 @@ Company.where(name: 'Spotlight Players').first_or_create!
 Company.where(name: "TCNJ's All College Theater").first_or_create!
 Company.where(name: 'TCNJ Musical Theatre').first_or_create!
 
-Position.where(code: 'A', description: 'Actor').first_or_create!
-Position.where(code: 'AD', description: 'Assistant Director').first_or_create!
-Position.where(code: 'ASM', description: 'Assistant Stage Manager').first_or_create!
-Position.where(code: 'APM', description: 'Assistant Production Manager').first_or_create!
-Position.where(code: 'CO', description: 'Co-Director').first_or_create!
-Position.where(code: 'D', description: 'Director').first_or_create!
-Position.where(code: 'LD', description: 'Lighting Designer').first_or_create!
-Position.where(code: 'P', description: 'Producer').first_or_create!
-Position.where(code: 'SM', description: 'Stage Manager').first_or_create!
-Position.where(code: 'SnD', description: 'Sound Designer').first_or_create!
-Position.where(code: 'SD', description: 'Set Designer').first_or_create!
-Position.where(code: 'TD', description: 'Technical Director').first_or_create!
+Position.where(code: 'A', description: 'Actor').first_or_create!(bio_order: 0)
+Position.where(code: 'AD', description: 'Assistant Director').first_or_create!(bio_order: 12)
+Position.where(code: 'ASM', description: 'Assistant Stage Manager').first_or_create!(bio_order: 21)
+Position.where(code: 'APM', description: 'Assistant Production Manager').first_or_create!(bio_order: 41)
+Position.where(code: 'CO', description: 'Co-Director').first_or_create!(bio_order: 11)
+Position.where(code: 'D', description: 'Director').first_or_create!(bio_order: 10)
+Position.where(code: 'LD', description: 'Lighting Designer').first_or_create!(bio_order: 50)
+Position.where(code: 'P', description: 'Producer').first_or_create!(bio_order: 40)
+Position.where(code: 'SM', description: 'Stage Manager').first_or_create!(bio_order: 20)
+Position.where(code: 'SnD', description: 'Sound Designer').first_or_create!(bio_order: 60)
+Position.where(code: 'SD', description: 'Set Designer').first_or_create!(bio_order: 70)
+Position.where(code: 'TD', description: 'Technical Director').first_or_create!(bio_order: 30)
 
 BioType.where(code: 'TS', description: 'This Season').first_or_create!
 BioType.where(code: 'S70', description: 'Shakespeare 70').first_or_create!
 BioType.where(code: 'OC', description: 'Other Company').first_or_create!
 BioType.where(code: 'NF', description: 'Not Featured').first_or_create!
 
-Venue.where(name: 'Kelsey Theatre')
-     .first_or_create!(address: "1200 Old Trenton Road,
-                                 West Windsor, NJ 08550",
-                       zipcode: '08550',
-                       external_url: 'http://www.kelseyatmccc.org/',
-                       description: 'The Kelsey theater is a hub of central Jersey theater. [...]')
-Venue.where(name: 'Don Evan Black Box Theater')
-     .first_or_create!(address: "2000 Pennington Road,
-                                 Ewing, NJ 08628",
-                       zipcode: '08628',
-                       external_url: 'https://tcnjcenterforthearts.tcnj.edu/venues/don-evans-black-box-theatre/',
-                       description: 'Located on the campus of The College of New Jersey (TCNJ), the Don [...]')
-Venue.where(name: 'Open Arts PAC')
-     .first_or_create!(address: "146 Route 130,
-                                 Suite 104
-                                 Bordentown Township, NJ 08505",
-                       zipcode: '08505',
-                       external_url: 'https://www.openartspac.org/',
-                       description: "Bordentown's Open Arts PAC is one heck of a [...]")
 
-Production.where(company: s70, title: 'Clybourne Park', year: 2018).first_or_create!
-Production.where(company: s70, title: 'The Merry Wives of Windsor', year: 2018).first_or_create!
-Production.where(company: s70, title: 'Hedda Gabler', year: 2016).first_or_create!
-Production.where(company: s70, title: 'Murder Most Foul: An Evening of Shakespeare', year: 2017).first_or_create!
-Production.where(company: s70, title: 'Measure for Measure', year: 2017).first_or_create!
-Production.where(company: s70, title: 'The Heidi Chronicles', year: 2017).first_or_create!
-Production.where(company: s70, title: 'Hamlet', year: 2016).first_or_create!
-Production.where(company: s70, title: 'The Winter’s Tale', year: 2015).first_or_create!
-Production.where(company: s70, title: 'Becky Shaw', year: 2015).first_or_create!
-Production.where(company: s70, title: 'Much Ado About Nothing', year: 2014).first_or_create!
-Production.where(company: s70, title: 'The Vortex', year: 2013).first_or_create!
-Production.where(company: s70, title: 'As You Like It', year: 2013).first_or_create!
-Production.where(company: s70, title: 'Antigone', year: 2011).first_or_create!
-Production.where(company: s70, title: 'Hay Fever', year: 2005).first_or_create!
-Production.where(company: s70, title: 'The Way of the World', year: 2004).first_or_create!
-Production.where(company: s70, title: 'Twelfth Night', year: 2004).first_or_create!
-Production.where(company: s70, title: "A Midsummer Night's Dream", year: 2002).first_or_create!
-Production.where(company: s70, title: "The Doctor's Dilemma", year: 2016).first_or_create!
-Production.where(company: s70, title: "A Midsummer Night's Dream", year: 2012).first_or_create!
-Production.where(company: s70, title: 'Twelfth Night', year: 2011).first_or_create!
-Production.where(company: s70, title: 'The Tempest', year: 2010).first_or_create!
-Production.where(company: s70, title: 'The Importance of Being Earnest', year: 2010).first_or_create!
-Production.where(company: s70, title: 'A View from the Bridge', year: 2009).first_or_create!
-Production.where(company: s70, title: 'Romeo and Juliet', year: 2009).first_or_create!
-Production.where(company: s70, title: 'The Skin of Our Teeth', year: 2008).first_or_create!
-Production.where(company: s70, title: 'Circle Mirror Transformation', year: 2014).first_or_create!
-Production.where(company: s70, title: 'God of Carnage', year: 2012).first_or_create!
-Production.where(company: s70, title: 'The Taming of the Shrew', year: 2008).first_or_create!
-Production.where(company: s70, title: 'The Constant Wife', year: 2008).first_or_create!
-Production.where(company: s70, title: 'The Glass Menagerie', year: 2007).first_or_create!
-Production.where(company: s70, title: 'The Merchant of Venice', year: 2007).first_or_create!
-Production.where(company: s70, title: 'Private Lives', year: 2007).first_or_create!
-
-
-
-
-
-Member.where(first_name: 'Amanda', last_name: 'McCarther')
-      .first_or_create!(title: 'Actor',
-                        photo_url: '',
-                        bio: "Amanda McCarther is a 2008 graduate of Mount Union College, now the University of Mount Union, where she studied Theater and Creative Writing. She was a member of both the women's chorus and the Mount Union choir and studied voice privately. She also spent a summer in London studying Theater at London Metropolitan University. In 2014, she spent a summer teaching drama at Mercersburg Academy's ESL+ summer program. Amanda is the ELL Specialist and International Student Advisor at Stuart Country Day School of the Sacred Heart. This summer she will be teaching drama to K-4 students at the StuARTS summer camp at Stuart. Amanda made her first appearance with Shakespeare ‘70 in its 2015 production of Hamlet at the Kelsey Theater.",)
+Dir[Rails.root.join('db/seeds/venues/**')].each { |f| require f }
+Dir[Rails.root.join('db/seeds/productions/**')].each { |f| require f }
+Dir[Rails.root.join('db/seeds/members/**')].each { |f| require f }
+Dir[Rails.root.join('db/seeds/castings/**')].each { |f| require f }
