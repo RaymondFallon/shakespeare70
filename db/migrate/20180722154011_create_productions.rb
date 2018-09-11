@@ -8,13 +8,7 @@ class CreateProductions < ActiveRecord::Migration[5.1]
       t.date :start_date
       t.date :end_date
       t.integer :year, limit: 4
-      t.string :monday
-      t.string :tuesday
-      t.string :wednesday
-      t.string :thursday
-      t.string :friday
-      t.string :saturday
-      t.string :sunday
+      t.string :schedule_desc
 
       t.text :description
 

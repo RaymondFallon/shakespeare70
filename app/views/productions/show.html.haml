@@ -5,12 +5,14 @@
 .container-fluid
   .row
     .col-12.col-md-6.col-lg-4.text-center
-      %p= @production.description&.html_safe
+      %h4
+        #{@production.start_date.strftime("%b %e")} - #{@production.end_date.strftime("%b %e, %Y")}
+      %p=@production.schedule_desc
+      - if @production.venue
+        = render partial: 'venue_card', locals: { venue: @production.venue }
+      .btn.btn-primary Purchase Tickets
+      = render partial: 'cast_list', locals: { production: @production }
     .col-12.col-md-6.col-lg-4
       = image_tag @production.poster, class: 'img-fluid', alt: "#{@production.title} Poster"
     .col-12.col-md-6.col-lg-4.text-center
-      .btn.btn-primary Purchase Tickets
-      = render partial: 'cast_list', locals: { production: @production }
-  - if @production.venue
-    .row
-      = render partial: 'venue_card', locals: { venue: @production.venue }
+      %p= @production.description&.html_safe

@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20180802015909) do
     t.date "start_date"
     t.date "end_date"
     t.integer "year"
+    t.string "schedule_desc"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -81,7 +82,10 @@ ActiveRecord::Schema.define(version: 20180802015909) do
 
   create_table "venues", force: :cascade do |t|
     t.string "name"
-    t.string "address"
+    t.string "street_address"
+    t.string "suite_address"
+    t.string "town"
+    t.string "state", limit: 2
     t.string "zipcode", limit: 5
     t.text "description"
     t.string "external_url"

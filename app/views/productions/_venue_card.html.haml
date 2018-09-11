@@ -1,1 +1,5 @@
-= venue.address
+%p.mb-1= venue.name
+%p.mb-0= venue.street_address
+%p.mb-0= venue.suite_address if venue.suite_address
+%p #{venue.town}, #{venue.state} #{venue.zipcode}
+
