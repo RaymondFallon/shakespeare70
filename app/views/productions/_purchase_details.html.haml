@@ -1,0 +1,9 @@
+%h4
+  #{production.start_date.strftime("%b %e")} - #{production.end_date.strftime("%b %e, %Y")}
+  %p=production.schedule_desc
+  - if production.venue
+    %p.mb-1= production.venue.name
+    %p.mb-0= production.venue.street_address
+    %p.mb-0= production.venue.suite_address if production.venue.suite_address
+    %p #{production.venue.town}, #{production.venue.state} #{production.venue.zipcode}
+  .btn.btn-primary Purchase Tickets
