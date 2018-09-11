@@ -4,10 +4,13 @@
 
 .container-fluid
   .row
-    .col-xs-12.col-md-6.col-lg-4.text-center
+    .col-12.col-md-6.col-lg-4.text-center
       %p= @production.description&.html_safe
-    .col-xs-12.col-md-6.col-lg-4
+    .col-12.col-md-6.col-lg-4
       = image_tag @production.poster, class: 'img-fluid', alt: "#{@production.title} Poster"
-    .col-xs-12.col-md-6.col-lg-4.text-center
+    .col-12.col-md-6.col-lg-4.text-center
       .btn.btn-primary Purchase Tickets
       = render partial: 'cast_list', locals: { production: @production }
+  - if @production.venue
+    .row
+      = render partial: 'venue_card', locals: { venue: @production.venue }

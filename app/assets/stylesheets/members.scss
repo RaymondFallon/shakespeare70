@@ -9,16 +9,11 @@ h1, h2, h3, h4, h5 {
 }
 
 .permanent-marker {
-  font-family: 'Permanent Marker' !important;
+  font-family: 'Permanent Marker', arial, helvetica, serif !important;
 }
 
 .poppins {
   font-family: 'Poppins', verdana, arial, helvetica, serif;
-  color: $deep-grey;
-
-  strong {
-    color: black;
-  }
 }
 
 #member-show-container {
@@ -39,4 +34,8 @@ a.member-card:hover {
   background-color: white;
   text-decoration: none;
   box-shadow: 5px 5px 5px lightgrey;
+}
+
+.deep-grey {
+  color: $deep-grey;
 }

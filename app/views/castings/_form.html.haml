@@ -7,7 +7,7 @@
           %li= message
   = f.hidden_field :member_id, value: @member.id
   .row
-    .form-group.col-xs-12.col-md-4{class: error_class(f.object, :position)}
+    .form-group.col-12.col-md-4{class: error_class(f.object, :position)}
       = f.label :position_id, 'Position'
       = f.collection_select(:position_id,
                               Position.all, :id, :description,
@@ -15,7 +15,7 @@
                               class: 'form-control')
       = error_field(f.object, :position)
   .row
-    .form-group.col-xs-12.col-md-4{class: error_class(f.object, :production)}
+    .form-group.col-12.col-md-4{class: error_class(f.object, :production)}
       = f.label :production_id, 'Production'
       = f.collection_select(:production_id,
                               Production.all, :id, :title,
@@ -24,14 +24,14 @@
       = error_field(f.object, :production)
   = f.label :bio_type_id, 'Bio Type'
   .row
-    .form-group.col-xs-12.col-md-4{class: error_class(f.object, :bio_type)}
+    .form-group.col-12.col-md-4{class: error_class(f.object, :bio_type)}
       - BioType.all.each_with_index do |bio_type, idx|
         = f.label "bio_type_id_#{idx + 1}", bio_type.description
         = f.radio_button(:bio_type_id, bio_type.id,
                          class: 'form-control')
       = error_field(f.object, :bio_type)
   .row
-    .form-group.col-xs-12.col-md-4{class: error_class(f.object, :role)}
+    .form-group.col-12.col-md-4{class: error_class(f.object, :role)}
       = f.label :role
       = f.text_field :role
       = error_field(f.object, :role)

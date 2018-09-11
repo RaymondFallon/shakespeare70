@@ -9,6 +9,12 @@ ww_art = Venue.find_by(name: 'West Windsor Arts Center')
 w_park = Venue.find_by(name: 'The Park')
 
 Production.where(company: s70, venue: don_bb, title: 'Clybourne Park', year: 2018).first_or_create!(
+  start_date: '10/18/2018'.to_date,
+  end_date: '10/21/2018'.to_date,
+  thursday: '8pm',
+  friday: '8pm',
+  saturday: '8pm',
+  sunday: '3pm????',
   description: "Clybourne Park is inspired by the events in Lorraine Hansberry's landmark drama, A Raisin in the Sun.  Playwright Bruce Norris explores ideas of community, race relations, culture, and language in an incisively funny and deeply moving play that won the 2011 Pulitzer Prize for Drama and the 2012 Tony Award for Best Play.
 </br>•</br>
 In Act One, it's 1959 and a white family is leaving Clybourne Park and selling their home to a black family, much to the ire of their neighbors.

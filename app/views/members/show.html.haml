@@ -2,34 +2,12 @@
 
 .container#member-show-container
   .row.justify-content-sm-center
-    .col-sm-10.offset-sm-1.col-lg-5.offset-lg-0
+    .col-sm-10.offset-sm-1.col-md-5.offset-md-0
       =image_tag @member.photo_url, class: 'img-fluid rounded-2r img-thumbnail',
                             alt: "#{@member.name} Headshot"
       %h1.permanent-marker.card-title.text-right
         = '- ' + @member.name
       %p.permanent-marker.text-right= @member.title
-    .col-sm-12.col-lg-7
-      %p.poppins.card-text.text-center= @member.bio&.html_safe
-      - if @member.castings.this_season.any?
-        %h5.permanent-marker This Season
-        %ul
-          - @member.castings.this_season.each do |casting|
-            %li.poppins
-              %em= link_to "#{casting.production.title}:", casting.production, class: 'black no-decoration hover-shadow'
-              = casting.role
-      - if @member.castings.with_s70.any?
-        %h5.permanent-marker With S'70
-        %ul
-          - @member.castings.with_s70.each do |casting|
-            -# TODO: Extract this to a casting_row helper method
-            %li.poppins
-              %em= link_to "#{casting.production.title}:", casting.production, class: 'black no-decoration hover-shadow'
-              = casting.role
-      - if @member.castings.with_others.any?
-        %h5.permanent-marker Other Companies
-        %ul
-          - @member.castings.with_others.each do |casting|
-            %li.poppins
-              %em{style:'color:black;'} #{casting.production.title}:
-              #{casting.role}
-              %strong (#{casting.production.company.name})
+    .col-sm-12.col-md-7
+      %p.deep-grey.card-text.text-center= @member.bio&.html_safe
+      = render partial: 'bio_credits', locals: { member: @member }
