@@ -1,5 +1,12 @@
-= image_tag 'stock_photos/ancient-architecture-art-189532.jpg', class: 'page-photo', alt: 'Statue of Shakespeare'
+-#= image_tag 'stock_photos/ancient-architecture-art-189532.jpg', class: 'page-photo', alt: 'Statue of Shakespeare'
 
+%div
+  = image_tag 'stock_photos/ancient-architecture-art-189532.jpg', style: 'width:100%'
+  %div#page-body
+    .container.text-center{style: 'background-color: rgba(0,0,0,.8);'}
+      .row
+        .col-12{style: 'color:white'}
+          %h1.mb-0 SHAKESPEARE '70
 
 %h1 Welcome to Shakespeare 70!
 %p= link_to 'Add a venue', new_venue_path
