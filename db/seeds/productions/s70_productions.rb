@@ -23,9 +23,9 @@ Norris' work challenges its audience to question the nature and quality of socia
 
 Production.where(company: s70, venue: kelsey, title: 'The Merry Wives of Windsor', year: 2018).first_or_create!
 Production.where(company: s70, venue: oa_pac, title: 'Hedda Gabler', year: 2016).first_or_create!
-Production.where(company: s70, venue: kelsey, title: 'Measure for Measure', year: 2017).first_or_create!
+Production.where(company: s70, venue: kelsey, title: 'Measure For Measure', year: 2017).first_or_create!
 Production.where(company: s70, venue: kelsey, title: 'Hamlet', year: 2016).first_or_create!
-Production.where(company: s70, venue: kelsey, title: 'The Winter’s Tale', year: 2015).first_or_create!
+Production.where(company: s70, venue: kelsey, title: "The Winter's Tale", year: 2015).first_or_create!
 Production.where(company: s70, venue: oa_pac, title: 'Murder Most Foul: An Evening of Shakespeare', year: 2017).first_or_create!
 Production.where(company: s70, venue: oa_pac, title: 'The Heidi Chronicles', year: 2017).first_or_create!
 Production.where(company: s70, venue: kelsey, title: 'Much Ado About Nothing', year: 2014).first_or_create!
