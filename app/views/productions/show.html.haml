@@ -4,13 +4,14 @@
 
 .container-fluid
   .row
-    .col-12.col-md-6.col-lg-4.text-center.mb-2
+    .col-12.col-md-6.col-lg-4.text-center.mb-2.align-self-center
       - if @production.start_date && @production.end_date
         = render partial: 'purchase_details', locals: { production: @production }
       = render partial: 'cast_list', locals: { production: @production }
-    .col-10.offset-1.col-md-5.offset-md-0.col-lg-4.mb-2
+    .col-10.offset-1.col-md-5.offset-md-0.col-lg-4.mb-2.align-self-center
       = image_tag @production.poster, class: 'img-fluid', alt: "#{@production.title} Poster"
-    .col-12.col-md-6.col-lg-4.text-center
+    .col-12.col-md-6.col-lg-4.text-center.align-self-center
       %p= @production.description&.html_safe
-    .col-12.col-md-6.col-lg-12{style: 'border: 1px solid black;'}
-      = render partial: 'venue_card', locals: { venue: @production.venue }
+    - if @production.venue
+      .col-12.col-md-6.col-lg-12
+        = render partial: 'venue_card', locals: { venue: @production.venue }

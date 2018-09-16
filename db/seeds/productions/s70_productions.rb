@@ -4,7 +4,7 @@ s70 = Company.where(name: "Shakespeare '70").first_or_create!
 
 kelsey = Venue.find_by(name: 'Kelsey Theatre')
 oa_pac = Venue.find_by(name: 'Open Arts PAC')
-don_bb = Venue.find_by(name: 'Don Evan Black Box Theater')
+don_bb = Venue.find_by(name: 'Don Evans Black Box Theater')
 ww_art = Venue.find_by(name: 'West Windsor Arts Center')
 w_park = Venue.find_by(name: 'The Park')
 

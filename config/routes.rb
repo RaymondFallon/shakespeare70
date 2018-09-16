@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'welcome#show'
 
   get :donations, to: 'static_pages#donations', as: :donations
+  get :community, to: 'static_pages#community', as: :community
 
   resources :members do
     resources :castings

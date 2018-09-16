@@ -7,7 +7,7 @@ Venue.where(name: 'Kelsey Theatre')
                       zipcode: '08550',
                       external_url: 'http://www.kelseyatmccc.org/',
                       description: 'The Kelsey theater is a hub of central Jersey theater. [...]')
-Venue.where(name: 'Don Evan Black Box Theater')
+Venue.where(name: 'Don Evans Black Box Theater')
     .first_or_create!(street_address: '2000 Pennington Road',
                       town: 'Ewing',
                       state: 'NJ',

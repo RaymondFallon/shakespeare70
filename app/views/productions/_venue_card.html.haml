@@ -1,3 +1,14 @@
-%p
-  = venue.name
-  card!
+.row
+  .col-12.col-lg-4.align-self-center
+    .d-flex.justify-content-around
+      = image_tag venue.photo, class: 'img-fluid', style: 'max-height:250px', alt: "Photo of #{venue.name}"
+  .col-12.col-lg-4.text-center.align-self-center
+    %h4= venue.name
+    %p.mb-0= venue.street_address
+    %p.mb-0= venue.suite_address if venue.suite_address
+    %p #{venue.town}, #{venue.state} #{venue.zipcode}
+  .col-12.col-lg-4.align-self-center
+    %p.p-4
+      Do we need to include a
+      %strong Google Map
+      here or anything?
