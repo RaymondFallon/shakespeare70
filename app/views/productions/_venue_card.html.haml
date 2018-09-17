@@ -7,7 +7,4 @@
     %p.mb-0= venue.suite_address if venue.suite_address
     %p #{venue.town}, #{venue.state} #{venue.zipcode}
   .col-12.col-lg-4.align-self-center
-    %p.p-4
-      Do we need to include a
-      %strong Google Map
-      here or anything?
+    = image_tag venue.photo2, class: 'img-fluid', alt: "Map to #{venue.name}"
