@@ -23,9 +23,9 @@ pa =       Position.where(code: 'PA', description: 'Production Assistant').first
 intern =   Position.where(code: 'I', description: 'Intern').first_or_create!
 
 [
-  [this_s, sm, 'Merry Wives of Windsor'],
+  [this_s, sm, 'The Merry Wives of Windsor'],
 
-  [s70_bt, sm, 'Measure for Measure'],
+  [s70_bt, sm, 'Measure For Measure'],
   [s70_bt, director, 'The Heidi Chronicles'],
   [s70_bt, pm, "The Doctor's Dilemma"],
   [s70_bt, sm, 'Hamlet'],
@@ -42,7 +42,7 @@ intern =   Position.where(code: 'I', description: 'Intern').first_or_create!
   [s70_bt, pa, 'Twelfth Night'],
   [s70_bt, sm, 'The Tempest'],
   [s70_bt, sm, 'The Importance of Being Earnest'],
-  [s70_bt, sm, 'Romeo & Juliet'],
+  [s70_bt, sm, 'Romeo and Juliet'],
   [s70_bt, sm, 'The Taming of the Shrew'],
   [s70_bt, sm, 'The Constant Wife'],
   [s70_bt, asm, 'The Glass Menagerie'],
