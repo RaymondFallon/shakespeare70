@@ -1,8 +1,5 @@
 %h1.text-center.mt-4 Meet Our Members
 
 .container-fluid
-  .row
+  .row.mb-3
     = render partial: 'member_card', collection: @members, as: 'member'
-
-
-= link_to 'New Member', new_member_path
