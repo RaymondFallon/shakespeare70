@@ -7,4 +7,5 @@
     %p.mb-0= venue.suite_address if venue.suite_address
     %p #{venue.town}, #{venue.state} #{venue.zipcode}
   .col-12.col-lg-4.align-self-center
-    = image_tag venue.photo2, class: 'img-fluid', alt: "Map to #{venue.name}"
+    - if venue.name == 'Don Evans Black Box Theater'
+      = link_to image_tag(venue.photo2, class: 'img-fluid', alt: "Map to #{venue.name}"), black_box_directions_path

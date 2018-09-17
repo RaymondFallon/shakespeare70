@@ -4,4 +4,7 @@ class StaticPagesController < ApplicationController
 
   def community
   end
+
+  def black_box_directions
+  end
 end
