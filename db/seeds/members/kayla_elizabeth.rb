@@ -6,7 +6,7 @@ kayla = Member.where(first_name: 'Kayla', last_name: 'Elizabeth')
               .first_or_create!(exec_committee: 'Y',
                                 featured: 'Y',
                                 title: 'Actor • Production Staff',
-                                bio: "Kayla Elizabeth earned her B.F.A. in Acting & Directing in 2007 from the University of Rhode Island. In addition to her training there, she has completed Shakespeare intensives at The Gamm theater in Rhode Island and Film & TV intensives at The Actor's Green Room in New York. Kayla's first appearance with Shakespeare '70 was in the 2016 production of \"Hedda Gabler\".")
+                                bio: "Kayla Elizabeth earned her B.F.A. in Acting & Directing in 2007 from the University of Rhode Island. In addition to her training there, she has completed Shakespeare intensives at The Gamm theater in Rhode Island and Film & TV intensives at The Actor's Green Room in New York. Kayla's first appearance with Shakespeare '70 was in the 2016 production of <em>Hedda Gabler</em>.")
 s70 = Company.where(name: "Shakespeare '70").first_or_create!
 nytf = Company.where(name: 'New York Thespis Festival').first_or_create!
 pt = Company.where(name: 'Pegasus Theatre').first_or_create!
