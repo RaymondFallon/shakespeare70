@@ -5,7 +5,7 @@
 jake = Member.where(first_name: 'Jake', last_name: 'Burbage')
              .first_or_create!(title: 'Actor • Director',
                                featured: 'Y',
-                               bio: "Jake has been acting for the last 20 years on both the stage and screen. As a child, he starred in the television sitcom <em>Grounded For Life</em> from 2000-2004, and voiced the role of Benny the Bull on Nickelodeon's <em>Dora the Explorer</em>.  Jake currently acts on and writes for the Amazon web series <em>Nuke City</em>, and will soon be seen co-anchoring a new political talk show satire entitled <em>Fake News Nightly,</em> premiering in 2019. He is a member of SAG-AFTRA and Actors Equity. He made his first appearance with Shakespeare '70 in their 2014 summer production of Much Ado About Nothing.")
+                               bio: "Jake has been acting for the last 20 years on both the stage and screen. As a child, he starred in the television sitcom <em>Grounded For Life</em> from 2000-2004, and voiced the role of Benny the Bull on Nickelodeon's <em>Dora the Explorer</em>.  Jake currently acts on and writes for the Amazon web series <em>Nuke City</em>, and will soon be seen co-anchoring a new political talk show satire entitled <em>Fake News Nightly,</em> premiering in 2019. He is a member of SAG-AFTRA and Actors Equity. He made his first appearance with Shakespeare '70 in their 2014 summer production of <em>Much Ado About Nothing</em>.")
 s70 = Company.where(name: "Shakespeare '70").first_or_create!
 cp = Company.where(name: 'Circle Players').first_or_create!
 gp = Company.where(name: 'Greenpoint Plays in Brooklyn').first_or_create!

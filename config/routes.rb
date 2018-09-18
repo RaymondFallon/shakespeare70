@@ -6,10 +6,10 @@ Rails.application.routes.draw do
   get :community, to: 'static_pages#community', as: :community
   get :donations, to: 'static_pages#donations', as: :donations
 
-  resources :members do
-    resources :castings
+  resources :members, only: [:index, :show] do
+    resources :castings, only: [:index, :show]
   end
 
-  resources :productions
-  resources :venues
+  resources :productions, only: [:index, :show]
+  resources :venues, only: [:index, :show]
 end

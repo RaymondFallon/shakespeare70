@@ -13,4 +13,8 @@ class Member < ApplicationRecord
     path = "member_photos/#{name.downcase.split.join('_')}.jpg"
     File.exist?("app/assets/images/#{path}") ? path : 'member_photos/shakespeare.jpg'
   end
+
+  def ex_comm?
+    exec_committee == 'Y'
+  end
 end

@@ -6,6 +6,13 @@
       -#  =image_tag image_path('S70logo.png')
     %nav.row.mt-1.poppins#main-navigation
       %ul
+        %span{ class: 'no-decoration goldenrod',
+               id: 'under-dev-warnings',
+               'data-toggle': 'modal',
+               'data-target': '#dev_modal' }
+          %i.fa.fa-exclamation-triangle
+          %i.fa.fa-exclamation-triangle
+          %i.fa.fa-exclamation-triangle
         %li.collection.nav-item.inline-block= link_to 'Coming Soon', production_path(Production.find_by(title: 'Clybourne Park'))
         %li.collection.nav-item.inline-block= link_to 'Bios', members_path
         %li.collection.nav-item.inline-block= link_to 'Past Shows', productions_path
