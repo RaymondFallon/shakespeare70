@@ -1,18 +1,18 @@
 - if @member.castings.this_season.any?
-  %h5.permanent-marker This Season
+  %h5.ruslan This Season
   %ul
     - @member.castings.this_season.each do |casting|
-      %li.poppins.deep-grey
+      %li.deep-grey
         =casting_credit(casting)
 - if @member.castings.with_s70.any?
-  %h5.permanent-marker With S'70
+  %h5.ruslan With S'70
   %ul
     - @member.castings.with_s70.each do |casting|
-      %li.poppins.deep-grey
+      %li.deep-grey
         =casting_credit(casting)
 - if @member.castings.with_others.any?
-  %h5.permanent-marker Other Companies
+  %h5.ruslan Other Companies
   %ul
     - @member.castings.with_others.each do |casting|
-      %li.poppins.deep-grey
+      %li.deep-grey
         = other_credit(casting)
