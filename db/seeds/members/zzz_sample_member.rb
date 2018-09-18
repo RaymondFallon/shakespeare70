@@ -68,14 +68,14 @@
 # end
 #
 # [
-#   ['other_company', oc_bt, position, 'TITLE_OF_PLAY', 2099, 'NAME_OF_ROLE'],
-#   ['other_company', oc_bt, position, 'TITLE_OF_PLAY', 2098, 'NAME_OF_ROLE'],
-#   ['other_company', oc_bt, position, 'TITLE_OF_PLAY', 2098, 'NAME_OF_ROLE'],
-#   ['other_company', oc_bt, position, 'TITLE_OF_PLAY', 2098, 'NAME_OF_ROLE'],
-#   ['other_company', oc_bt, position, 'TITLE_OF_PLAY', 2098, 'NAME_OF_ROLE'],
-#   ['other_company', oc_bt, position, 'TITLE_OF_PLAY', 2098, 'NAME_OF_ROLE'],
-#   ['other_company', oc_bt, position, 'TITLE_OF_PLAY', 2098, 'NAME_OF_ROLE'],
-#   ['other_company', oc_bt, position, 'TITLE_OF_PLAY', 2097, 'NAME_OF_ROLE']
+#   ['other_company', oc_bt, position, 'TITLE_OF_PLAY', 'NAME_OF_ROLE'],
+#   ['other_company', oc_bt, position, 'TITLE_OF_PLAY', 'NAME_OF_ROLE'],
+#   ['other_company', oc_bt, position, 'TITLE_OF_PLAY', 'NAME_OF_ROLE'],
+#   ['other_company', oc_bt, position, 'TITLE_OF_PLAY', 'NAME_OF_ROLE'],
+#   ['other_company', oc_bt, position, 'TITLE_OF_PLAY', 'NAME_OF_ROLE'],
+#   ['other_company', oc_bt, position, 'TITLE_OF_PLAY', 'NAME_OF_ROLE'],
+#   ['other_company', oc_bt, position, 'TITLE_OF_PLAY', 'NAME_OF_ROLE'],
+#   ['other_company', oc_bt, position, 'TITLE_OF_PLAY', 'NAME_OF_ROLE']
 # ].each do |casting|
 #   Casting.where(member: say_my_name_say_my_name,
 #                 production: Production.where(company: Company.where(name: casting[0]).first_or_create!,

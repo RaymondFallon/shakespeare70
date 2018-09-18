@@ -12,7 +12,7 @@ Production.where(company: s70, venue: don_bb, title: 'Clybourne Park', year: 201
   start_date: '18/10/2018'.to_date,
   end_date: '21/10/2018'.to_date,
   schedule_desc: 'Thursday-Saturday at 8pm, Sunday at 2pm',
-  description: "Clybourne Park is inspired by the events in Lorraine Hansberry's landmark drama, A Raisin in the Sun.  Playwright Bruce Norris explores ideas of community, race relations, culture, and language in an incisively funny and deeply moving play that won the 2011 Pulitzer Prize for Drama and the 2012 Tony Award for Best Play.
+  description: "<em>Clybourne Park</em> is inspired by the events in Lorraine Hansberry's landmark drama, <em>A Raisin in the Sun</em>.  Playwright Bruce Norris explores ideas of community, race relations, culture, and language in an incisively funny and deeply moving play that won the 2011 Pulitzer Prize for Drama and the 2012 Tony Award for Best Play.
 </br>•</br>
 In Act One, it's 1959 and a white family is leaving Clybourne Park and selling their home to a black family, much to the ire of their neighbors.
 </br>•</br>
@@ -35,10 +35,10 @@ Production.where(company: s70, venue: ww_art, title: 'The Vortex', year: 2013).f
 Production.where(company: s70, venue: ww_art, title: 'Antigone', year: 2011).first_or_create!
 Production.where(company: s70, title: 'Hay Fever', year: 2005).first_or_create!
 Production.where(company: s70, title: 'The Way of the World', year: 2004).first_or_create!
-Production.where(company: s70, venue: w_park, title: 'Twelfth Night', year: 2004).first_or_create!
+# Production.where(company: s70, venue: w_park, title: 'Twelfth Night', year: 2004).first_or_create!
 Production.where(company: s70, venue: kelsey, title: "A Midsummer Night's Dream", year: 2012).first_or_create!
 Production.where(company: s70, venue: kelsey, title: 'Twelfth Night', year: 2011).first_or_create!
-Production.where(company: s70, venue: w_park, title: "A Midsummer Night's Dream", year: 2002).first_or_create!
+# Production.where(company: s70, venue: w_park, title: "A Midsummer Night's Dream", year: 2002).first_or_create!
 Production.where(company: s70, venue: kelsey, title: 'The Tempest', year: 2010).first_or_create!
 Production.where(company: s70, venue: oa_pac, title: "The Doctor's Dilemma", year: 2016).first_or_create!
 Production.where(company: s70, venue: don_bb, title: 'The Importance of Being Earnest', year: 2010).first_or_create!

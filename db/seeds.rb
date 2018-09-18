@@ -9,9 +9,9 @@ Company.where(name: 'Greenpoint Plays in Brooklyn').first_or_create!
 Company.where(name: 'Holmes County Arts Center').first_or_create!
 Company.where(name: 'Langhorne Players').first_or_create!
 Company.where(name: 'New York Thespis Festival').first_or_create!
-Company.where(name: 'Pegasus Theatre').first_or_create!
+Company.where(name: 'Pegasus Theatre Company').first_or_create!
 Company.where(name: 'Pennington Players').first_or_create!
-Company.where(name: 'PCM Theater').first_or_create!
+Company.where(name: 'PCM Theater Company').first_or_create!
 Company.where(name: 'Philadelphia Fringe Festival').first_or_create!
 Company.where(name: 'PinnWorth Productions').first_or_create!
 Company.where(name: 'Playful Theater Productions').first_or_create!
@@ -26,6 +26,8 @@ Position.where(code: 'AD', description: 'Assistant Director').first_or_create!(b
 Position.where(code: 'ASM', description: 'Assistant Stage Manager').first_or_create!(bio_order: 21)
 Position.where(code: 'APM', description: 'Assistant Production Manager').first_or_create!(bio_order: 41)
 Position.where(code: 'CO', description: 'Co-Director').first_or_create!(bio_order: 11)
+Position.where(code: 'CC', description: 'Costume Consultant').first_or_create!(bio_order: 81)
+Position.where(code: 'CD', description: 'Costume Designer').first_or_create!(bio_order: 80)
 Position.where(code: 'CPM', description: 'Co-Production Manager').first_or_create!(bio_order: 42)
 Position.where(code: 'D', description: 'Director').first_or_create!(bio_order: 10)
 Position.where(code: 'I', description: 'Intern').first_or_create!(bio_order: 999)
