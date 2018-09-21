@@ -22,33 +22,33 @@ Norris' work challenges its audience to question the nature and quality of socia
 )
 
 Production.where(company: s70, venue: kelsey, title: 'The Merry Wives of Windsor', year: 2018).first_or_create!
-Production.where(company: s70, venue: oa_pac, title: 'Hedda Gabler', year: 2016).first_or_create!
 Production.where(company: s70, venue: kelsey, title: 'Measure For Measure', year: 2017).first_or_create!
-Production.where(company: s70, venue: kelsey, title: 'Hamlet', year: 2016).first_or_create!
-Production.where(company: s70, venue: kelsey, title: "The Winter's Tale", year: 2015).first_or_create!
 Production.where(company: s70, venue: oa_pac, title: 'Murder Most Foul: An Evening of Shakespeare', year: 2017).first_or_create!
 Production.where(company: s70, venue: oa_pac, title: 'The Heidi Chronicles', year: 2017).first_or_create!
-Production.where(company: s70, venue: kelsey, title: 'Much Ado About Nothing', year: 2014).first_or_create!
+Production.where(company: s70, venue: oa_pac, title: 'Hedda Gabler', year: 2016).first_or_create!
+Production.where(company: s70, venue: oa_pac, title: "The Doctor's Dilemma", year: 2016).first_or_create!
+Production.where(company: s70, venue: kelsey, title: 'Hamlet', year: 2016).first_or_create!
+Production.where(company: s70, venue: kelsey, title: "The Winter's Tale", year: 2015).first_or_create!
 Production.where(company: s70, venue: oa_pac, title: 'Becky Shaw', year: 2015).first_or_create!
+Production.where(company: s70, venue: kelsey, title: 'Much Ado About Nothing', year: 2014).first_or_create!
+Production.where(company: s70, venue: ww_art, title: 'Circle Mirror Transformation', year: 2014).first_or_create!
 Production.where(company: s70, venue: kelsey, title: 'As You Like It', year: 2013).first_or_create!
 Production.where(company: s70, venue: ww_art, title: 'The Vortex', year: 2013).first_or_create!
-Production.where(company: s70, venue: ww_art, title: 'Antigone', year: 2011).first_or_create!
-Production.where(company: s70, title: 'Hay Fever', year: 2005).first_or_create!
-Production.where(company: s70, title: 'The Way of the World', year: 2004).first_or_create!
-# Production.where(company: s70, venue: w_park, title: 'Twelfth Night', year: 2004).first_or_create!
 Production.where(company: s70, venue: kelsey, title: "A Midsummer Night's Dream", year: 2012).first_or_create!
+Production.where(company: s70, venue: ww_art, title: 'God of Carnage', year: 2012).first_or_create!
 Production.where(company: s70, venue: kelsey, title: 'Twelfth Night', year: 2011).first_or_create!
-# Production.where(company: s70, venue: w_park, title: "A Midsummer Night's Dream", year: 2002).first_or_create!
+Production.where(company: s70, venue: ww_art, title: 'Antigone', year: 2011).first_or_create!
 Production.where(company: s70, venue: kelsey, title: 'The Tempest', year: 2010).first_or_create!
-Production.where(company: s70, venue: oa_pac, title: "The Doctor's Dilemma", year: 2016).first_or_create!
 Production.where(company: s70, venue: don_bb, title: 'The Importance of Being Earnest', year: 2010).first_or_create!
 Production.where(company: s70, venue: kelsey, title: 'Romeo and Juliet', year: 2009).first_or_create!
 Production.where(company: s70, venue: don_bb, title: 'A View from the Bridge', year: 2009).first_or_create!
 Production.where(company: s70, title: 'The Skin of Our Teeth', year: 2008).first_or_create!
-Production.where(company: s70, venue: ww_art, title: 'Circle Mirror Transformation', year: 2014).first_or_create!
-Production.where(company: s70, venue: ww_art, title: 'God of Carnage', year: 2012).first_or_create!
 Production.where(company: s70, title: 'The Taming of the Shrew', year: 2008).first_or_create!
 Production.where(company: s70, title: 'The Constant Wife', year: 2008).first_or_create!
 Production.where(company: s70, venue: kelsey, title: 'The Merchant of Venice', year: 2007).first_or_create!
 Production.where(company: s70, title: 'The Glass Menagerie', year: 2007).first_or_create!
 Production.where(company: s70, title: 'Private Lives', year: 2007).first_or_create!
+Production.where(company: s70, title: 'Hay Fever', year: 2005).first_or_create!
+Production.where(company: s70, title: 'The Way of the World', year: 2004).first_or_create!
+# Production.where(company: s70, venue: w_park, title: 'Twelfth Night', year: 2004).first_or_create!
+# Production.where(company: s70, venue: w_park, title: "A Midsummer Night's Dream", year: 2002).first_or_create!

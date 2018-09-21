@@ -7,7 +7,7 @@ class Production < ApplicationRecord
   scope :by_s70, -> { where(company: Company.find_by(name: "Shakespeare '70")) }
 
   def poster
-    path = "production_posters/#{year}/#{title.downcase.split.join('_').gsub(':', '')}.jpg"
+    path = "production_posters/#{year}/#{title.downcase.split.join('_').gsub(/[\:\']/, '')}.jpg"
     File.exist?("app/assets/images/#{path}") ? path : 'production_posters/get_a_poster.jpg'
   end
 
