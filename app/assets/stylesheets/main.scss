@@ -1,4 +1,7 @@
 $deep-grey: #4F4F4F;
+$facebook-blue: #3B5998;
+$twitter-blue: #0084FF;
+$instagram-red: #fb3958;
 
 html, body {
   margin: 0;
@@ -47,4 +50,16 @@ main {
 
 .white {
   color: white !important;
+}
+
+#facebook_icon:hover {
+  color: $facebook-blue !important;
+}
+
+#twitter_icon:hover {
+  color: $twitter-blue !important;
+}
+
+#instagram_icon:hover {
+  color: $instagram-red !important;
 }
