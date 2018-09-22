@@ -12,5 +12,7 @@
       - if @production.start_date && @production.end_date
         = render partial: 'purchase_details', locals: { production: @production }
       = render partial: 'cast_list', locals: { production: @production }
+
+      %strong= @production.venue.name
     .col-10.offset-1.col-sm-6.offset-sm-0.mb-2
       = image_tag @production.poster, class: 'img-fluid', alt: "#{@production.title} Poster"
