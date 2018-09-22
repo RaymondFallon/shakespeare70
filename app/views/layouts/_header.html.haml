@@ -2,20 +2,31 @@
   #header-inner.row.justify-between
     %div.h2.ml-3.mb-0.mt-2.ruslan#s70-logo
       =link_to "SHAKESPEARE '70", root_path
-      -#%a{href: root_path}
-      -#  =image_tag image_path('S70logo.png')
     %nav.row.mt-1.poppins#main-navigation
       %ul
-        %span{ class: 'no-decoration goldenrod',
+        %span{ class: 'no-decoration goldenrod mr-4',
                id: 'under-dev-warnings',
+               style: 'cursor:pointer;',
                'data-toggle': 'modal',
                'data-target': '#dev_modal' }
           %i.fa.fa-exclamation-triangle
           %i.fa.fa-exclamation-triangle
           %i.fa.fa-exclamation-triangle
+        = link_to 'https://www.facebook.com/Shakespeare70/',
+                  class: 'no-decoration goldenrod',
+                  target: '_blank' do
+          %i.fa.fa-facebook.no-decoration.goldenrod.mr-2
+        = link_to 'https://twitter.com/Shakespeare70',
+                  class: 'no-decoration goldenrod',
+                  target: '_blank' do
+          %i.fa.fa-twitter.no-decoration.goldenrod.mr-2
+        =link_to 'https://www.instagram.com/shakespeare70inc/',
+                 class: 'no-decoration goldenrod',
+                 target: '_blank' do
+          %i.fa.fa-instagram.no-decoration.goldenrod.mr-2
         %li.collection.nav-item.inline-block= link_to 'Coming Soon', production_path(Production.find_by(title: 'Clybourne Park'))
         %li.collection.nav-item.inline-block= link_to 'Bios', members_path
-        %li.collection.nav-item.inline-block= link_to 'Past Shows', productions_path
+        %li.collection.nav-item.inline-block= link_to 'Shows', productions_path
         %li.collection.nav-item.inline-block= link_to 'Community', community_path
         %li.collection.nav-item.inline-block= link_to 'Donate', donations_path
 
