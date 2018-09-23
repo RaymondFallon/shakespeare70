@@ -1,7 +1,7 @@
 %header#s70-header
   #header-inner.row.justify-between
     %div.h2.ml-3.mb-0.mt-2.ruslan#s70-logo
-      =link_to "SHAKESPEARE '70", root_path
+      =link_to "SHAKESPEARE '70", root_path, class: 'red-hover'
     %nav.row.mt-1.poppins#main-navigation
       %ul
         %span{ class: 'no-decoration mr-4',
@@ -27,9 +27,19 @@
                  title: 'Instagram',
                  target: '_blank' do
           %i#instagram_icon.fa.fa-instagram.no-decoration.goldenrod.mr-2{ 'aria-hidden': 'true' }
-        %li.collection.nav-item.inline-block= link_to 'Coming Soon', production_path(Production.find_by(title: 'Clybourne Park'))
-        %li.collection.nav-item.inline-block= link_to 'Bios', members_path
-        %li.collection.nav-item.inline-block= link_to 'Shows', productions_path
-        %li.collection.nav-item.inline-block= link_to 'Community', community_path
-        %li.collection.nav-item.inline-block= link_to 'Donate', donations_path
+        %li.collection.nav-item.inline-block= link_to 'Coming Soon',
+                                                      production_path(Production.find_by(title: 'Clybourne Park')),
+                                                      class: 'red-hover'
+        %li.collection.nav-item.inline-block= link_to 'Bios',
+                                                      members_path,
+                                                      class: 'red-hover'
+        %li.collection.nav-item.inline-block= link_to 'Shows',
+                                                      productions_path,
+                                                      class: 'red-hover'
+        %li.collection.nav-item.inline-block= link_to 'Community',
+                                                      community_path,
+                                                      class: 'red-hover'
+        %li.collection.nav-item.inline-block= link_to 'Donate',
+                                                      donations_path,
+                                                      class: 'red-hover'
 

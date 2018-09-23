@@ -53,13 +53,21 @@ main {
 }
 
 #facebook_icon:hover {
-  color: $facebook-blue !important;
+  color: white !important;
+  font-size: 2em;
 }
 
 #twitter_icon:hover {
   color: $twitter-blue !important;
+  font-size: 2em;
 }
 
 #instagram_icon:hover {
   color: $instagram-red !important;
+  font-size: 2em;
+}
+
+.red-hover:hover {
+  color: red !important;
+  background-color: black;
 }
