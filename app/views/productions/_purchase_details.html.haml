@@ -1,9 +1,12 @@
-%h4
-  #{production.start_date.strftime("%b %e")} - #{production.end_date.strftime("%b %e, %Y")}
-%p.mb-1=production.schedule_desc
-- if production.venue
-  .h5.mb-3= production.venue.name
-  -#%p.mb-0= production.venue.street_address
-  -#%p.mb-0= production.venue.suite_address if production.venue.suite_address
-  -#%p #{production.venue.town}, #{production.venue.state} #{production.venue.zipcode}
-.btn.btn-primary.mb-1 Purchase Tickets
+#purchase-details
+  %h4.mt-1
+    #{production.start_date.strftime("%b %e")} - #{production.end_date.strftime("%b %e, %Y")}
+  %p.mb-1=production.schedule_desc
+  - if production.venue
+    .h5.mb-3= production.venue.name
+    -#%p.mb-0= production.venue.street_address
+    -#%p.mb-0= production.venue.suite_address if production.venue.suite_address
+    -#%p #{production.venue.town}, #{production.venue.state} #{production.venue.zipcode}
+  = link_to 'Purchase Tickets',
+            'https://tcnjcenterforthearts.secure.force.com/ticket#sections_a0Ff200000MO3OWEA1',
+            class: 'btn btn-primary mb-2 white'

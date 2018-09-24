@@ -6,6 +6,9 @@ class Casting < ApplicationRecord
   belongs_to :position
   belongs_to :bio_type
 
+  default_scope do
+    joins(:production).order('productions.year DESC NULLS LAST, productions.start_date DESC NULLS LAST')
+  end
   scope :this_season, -> { where(bio_type: BioType.find_by(code: 'TS')) }
   scope :with_s70,    -> { where(bio_type: BioType.find_by(code: 'S70')) }
   scope :with_others, -> { where(bio_type: BioType.find_by(code: 'OC')) }

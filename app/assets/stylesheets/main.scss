@@ -1,7 +1,4 @@
 $deep-grey: #4F4F4F;
-$twitter-blue: #0084FF;
-$instagram-red: #cd486b;
-$instagram-purple: #8a3ab9;
 
 html, body {
   margin: 0;
@@ -50,23 +47,6 @@ main {
 
 .white {
   color: white !important;
-}
-
-#facebook_icon:hover {
-  color: white !important;
-  font-size: 2em;
-}
-
-#twitter_icon:hover {
-  color: $twitter-blue !important;
-  font-size: 2em;
-}
-
-#instagram_icon:hover {
-  font-size: 2em;
-  background: -webkit-linear-gradient($instagram-purple, $instagram-red);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .red-hover:hover {

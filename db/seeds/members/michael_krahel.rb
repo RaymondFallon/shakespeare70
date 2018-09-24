@@ -19,8 +19,6 @@ lights =   Position.where(code: 'LD', description: 'Lighting Designer').first_or
 sm =       Position.where(code: 'SM', description: 'Stage Manager').first_or_create!
 
 [
-    [this_bt, actor, 'The Merry Wives of Windsor', 'Frank Ford'],
-
     [s70_bt, actor, 'Murder Most Foul: An Evening of Shakespeare', 'Ensemble'],
     [s70_bt, lights, 'Murder Most Foul: An Evening of Shakespeare'],
     [s70_bt, actor, 'Measure For Measure', 'Claudio'],
