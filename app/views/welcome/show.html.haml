@@ -1,9 +1,24 @@
 
 %div
   = image_tag 'stock_photos/ancient-architecture-art-189532.jpg', style: 'width:100%'
-  %div#page-body
+  %div#welcome-body
     .container.text-center{style: 'background-color: rgba(0,0,0,.8);'}
       .row
         .col-12{style: 'color:white; border-radius: 12px;'}
-          %h1.ruslan.mt-3 SHAKESPEARE '70
+          %h1#welcome-header.ruslan.mt-3 SHAKESPEARE '70
           = link_to 'Clybourne Park', clybourne_page, class: 'btn btn-primary mb-4 white'
+          .container
+            .row
+              .col-8.offset-2
+                %p
+                  Founded in 1970 at TCNJ, S70 is a theater group operating in central New Jersey
+                  dedicated to producing thoughtful, relevant theater -- both modern and classic.
+                %p
+                  Every summer, we perform one of our namesake's many works at
+                  the Kelsey Theatre in West Windsor, NJ.  In the fall, we produce a piece from a modern
+                  playwright at one of our other great venues.
+                %p
+                  %strong
+                    This October, we will perform Bruce Norris' Pulitzer Prize and Tony winning drama,
+                    %em Clybourne Park
+                    at an old favorite location: Don Evans Black Box Theater on the campus of TCNJ.
