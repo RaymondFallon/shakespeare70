@@ -43,6 +43,7 @@ Position.where(code: 'PM', description: 'Production Manager').first_or_create!(b
 Position.where(code: 'SM', description: 'Stage Manager').first_or_create!(bio_order: 20)
 Position.where(code: 'SnD', description: 'Sound Designer').first_or_create!(bio_order: 60)
 Position.where(code: 'SD', description: 'Set Designer').first_or_create!(bio_order: 70)
+Position.where(code: 'SD2', description: 'Scenic Design').first_or_create!(bio_order: 71)
 Position.where(code: 'TD', description: 'Technical Director').first_or_create!(bio_order: 30)
 Position.where(code: 'V', description: 'Videographer').first_or_create!(bio_order: 90)
 
@@ -53,7 +54,7 @@ BioType.where(code: 'NF', description: 'Not Featured').first_or_create!
 
 
 Dir[Rails.root.join('db/seeds/venues/**')].each { |f| require f }
-Dir[Rails.root.join('db/seeds/productions/s70_productions')].each { |f| require f } # S70 Productions Without Castings
+Dir[Rails.root.join('db/seeds/productions/s70_productions.rb')].each { |f| require f } # S70 Productions Without Castings
 Dir[Rails.root.join('db/seeds/members/**')].each { |f| require f }
 Dir[Rails.root.join('db/seeds/productions/**')].each { |f| require f } # Castings for all of the shows
 Dir[Rails.root.join('db/seeds/castings/**')].each { |f| require f }

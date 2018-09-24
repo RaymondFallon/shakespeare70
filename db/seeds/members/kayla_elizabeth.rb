@@ -23,7 +23,7 @@ director = Position.where(code: 'D', description: 'Director').first_or_create!
   [s70, s70_bt, actor, 'Murder Most Foul: An Evening of Shakespeare', 'Ensemble'],
   [s70, s70_bt, apm, 'Hamlet'],
   [s70, s70_bt, actor, 'The Heidi Chronicles', 'Heidi'],
-  [s70, s70_bt, actor, 'Hedda Gabler', 'Hedda Gabler'],
+  # [s70, s70_bt, actor, 'Hedda Gabler', 'Hedda Gabler'],
 
   [nytf, oc_bt, actor, 'The Empty Chair', 'Katherine'],
   [pcm, oc_bt, actor, 'American Prez', 'Leslie'],

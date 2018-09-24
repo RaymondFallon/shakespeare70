@@ -2,7 +2,7 @@
 
 # Initial Bio For Kyla Donnelly
 
-kyla = Member.where(first_name: 'Kyla', last_name: 'Donnelly')
+kyla = Member.where(first_name: 'Kyla', last_name: 'Mostello Donnelly')
             .first_or_create!(title: 'Actor',
                               featured: 'Y',
                               bio: "KYLA HASN'T WRITTEN A BIO!")
