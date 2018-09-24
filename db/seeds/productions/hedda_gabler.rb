@@ -28,12 +28,12 @@ end
 
 
 
-[
+[ # Pro-staff
   ['Director', 'Michael', 'Krahel'],
   ['Stage Manager', 'Brittany', 'Rivera'],
   ['Assistant Stage Manager', 'Gwyneth', 'Curbishley'],
   ['Producer', 'Curt', 'Foxworth'],
-  ['Producer', 'Lili', 'Daniel'],
+  ['Producer', 'Lili', 'Timmes'],
   ['Scenic Design', 'Alexa', 'Logush'],
   ['Lighting Designer', 'Starrika', 'McCloud'],
   ['Sound Design', 'Stephanie', 'Schoppe'],

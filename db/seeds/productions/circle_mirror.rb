@@ -26,7 +26,7 @@ end
 
 
 
-[
+[ # Pro-staff
   ['Director', 'Janet', 'Quartarone'],
   ['Assistant Director', 'Lili', 'Timmes'],
   ['Stage Manager', 'Andrew', 'Timmes'],

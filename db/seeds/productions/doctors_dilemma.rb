@@ -31,7 +31,7 @@ end
 
 
 
-[
+[ # Pro-staff
   ['Director', 'Janet', 'Quartarone'],
   ['Stage Manager', 'Blaire', 'Deziel'],
   ['Producer', 'Lili', 'Timmes'],

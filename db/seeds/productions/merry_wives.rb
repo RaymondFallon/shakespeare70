@@ -43,7 +43,7 @@ merry_wives = Production.where(company: s70,
 
 
 
-[
+[ # Pro-staff
   ['Director', 'John', 'Erath'],
   ['Assistant Director', 'Janet', 'Quartarone'],
   ['Production Manager', 'Curt', 'Foxworth'],

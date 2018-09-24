@@ -1,6 +1,6 @@
 class ProductionsController < ApplicationController
   def index
-    @productions = Production.by_s70.where('year > 2015').order('year desc').group_by(&:year)
+    @productions = Production.by_s70.where('year > 2013').order('year desc').group_by(&:year)
   end
 
   def show
