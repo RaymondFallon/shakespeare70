@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'welcome#show'
 
   # GET route names from old Wordpress site
-  get :previous_productions, to: 'productions#index'
+  get 'previous-productions', to: 'productions#index'
 
   get :black_box_directions, to: 'static_pages#black_box_directions', as: :black_box_directions
   get :community, to: 'static_pages#community', as: :community
