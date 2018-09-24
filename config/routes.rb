@@ -15,4 +15,6 @@ Rails.application.routes.draw do
 
   resources :productions, only: [:index, :show]
   resources :venues, only: [:index, :show]
+
+  get '*path', to: 'welcome#show'
 end
