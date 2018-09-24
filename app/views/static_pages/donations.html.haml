@@ -2,10 +2,22 @@
 %div
   = image_tag 'stock_photos/barrel-cash-coins-164580.jpg', style: 'width:100%'
   %div#page-body
-    .container.text-center{style: 'background-color: rgba(0,0,0,.8);'}
+    .container.ruslan.text-center{style: 'background-color: rgba(0,0,0,.8);'}
       .row
         .col-12.p-0.pt-3{style: 'color:white'}
-          Thanks for thinking of us...
+          .container
+            .row
+              .col-12
+                "I can no other answer make,
+            .row
+              .col-12
+                but, thanks,
+            .row
+              .col-12
+                and thanks."
+            .row.text-right.permanent-marker
+              .col-12
+                = '- Twelfth Night'
         .col-12.p-0.pb-3.pt-3
           = render partial: 'paypal_button'
 

@@ -59,7 +59,7 @@ end
   ['Somerset Valley Players', oc_bt, actor, 'California Suite', 'Gert'],
   ['PCM Theatre Company', oc_bt, actor, 'American Prez', 'Jayme'],
   ['Langhorne Players', oc_bt, actor, 'Vanya & Sonia & Masha & Spike', 'Nina'],
-  ['Pegasus Theatre Company', oc_bt, sm, 'Proof', 'NAME_OF_ROLE'],
+  ['Pegasus Theatre Company', oc_bt, sm, 'Proof'],
   ['Pegasus Theatre Company', oc_bt, sm, 'Chapter Two'],
   ['Pennington Players', oc_bt, asm, 'Glengarry Glen Ross'],
   ['Eden', oc_bt, sm, 'Eden Dreams Benefit Gala']

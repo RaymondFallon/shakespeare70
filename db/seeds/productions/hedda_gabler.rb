@@ -46,3 +46,4 @@ end
                 bio_type: s70_bt).first_or_create!
 end
 
+hedda_g.update(has_all_data: 'Y')

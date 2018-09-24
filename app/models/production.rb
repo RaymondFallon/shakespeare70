@@ -18,4 +18,8 @@ class Production < ApplicationRecord
   def pro_staff
     castings.pro_staff
   end
+
+  def has_all_data?
+    has_all_data == 'Y'
+  end
 end

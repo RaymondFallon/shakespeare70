@@ -11,6 +11,7 @@ class CreateProductions < ActiveRecord::Migration[5.1]
       t.string :schedule_desc
 
       t.text :description
+      t.string :has_all_data, limit: 1
 
       t.timestamps
     end

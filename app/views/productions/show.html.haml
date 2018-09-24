@@ -3,7 +3,7 @@
   .row
     .col-12
       %hr
-      %h1.ruslan.text-center= @production.title
+      %h1.ruslan.text-center #{@production.title} (#{@production.year})
       %hr
 
 .container-fluid
@@ -12,6 +12,10 @@
       - if @production.start_date && @production.end_date
         = render partial: 'purchase_details', locals: { production: @production }
       = render partial: 'cast_list', locals: { production: @production }
+      - unless @production.has_all_data?
+        %p
+          This cast list may be incomplete...
+          %em For Now!
       - if @production.venue
         %strong= @production.venue.name
     .col-10.offset-1.col-sm-6.offset-sm-0.mb-2

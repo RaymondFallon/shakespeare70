@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 20180802015909) do
     t.integer "year"
     t.string "schedule_desc"
     t.text "description"
+    t.string "has_all_data", limit: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["company_id"], name: "index_productions_on_company_id"

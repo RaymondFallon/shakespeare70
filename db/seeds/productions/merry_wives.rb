@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-s70 = Company.where(name: "Shakespeare '70").first_or_create!
+s70 = Company.find_by(name: "Shakespeare '70")
 
 kelsey = Venue.find_by(name: 'Kelsey Theatre')
 
@@ -65,3 +65,5 @@ merry_wives = Production.where(company: s70,
                 position: Position.find_by(description: casting[0]),
                 bio_type: this_s).first_or_create!
 end
+
+merry_wives.update(has_all_data: 'Y')

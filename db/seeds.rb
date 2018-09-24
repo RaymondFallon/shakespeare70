@@ -32,6 +32,7 @@ Position.where(code: 'CD', description: 'Costume Designer').first_or_create!(bio
 Position.where(code: 'CPM', description: 'Co-Production Manager').first_or_create!(bio_order: 42)
 Position.where(code: 'D', description: 'Director').first_or_create!(bio_order: 10)
 Position.where(code: 'Dr', description: 'Dramaturg').first_or_create!(bio_order: 110)
+Position.where(code: 'FC', description: 'Fight Choreographer').first_or_create!(bio_order: 25)
 Position.where(code: 'GD', description: 'Graphic Design').first_or_create!(bio_order: 92)
 Position.where(code: 'I', description: 'Intern').first_or_create!(bio_order: 999)
 Position.where(code: 'LD', description: 'Lighting Designer').first_or_create!(bio_order: 50)
