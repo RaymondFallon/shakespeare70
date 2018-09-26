@@ -7,6 +7,9 @@
     -#%p.mb-0= production.venue.street_address
     -#%p.mb-0= production.venue.suite_address if production.venue.suite_address
     -#%p #{production.venue.town}, #{production.venue.state} #{production.venue.zipcode}
-  = link_to 'Purchase Tickets',
-            'https://tcnjcenterforthearts.secure.force.com/ticket#sections_a0Ff200000MO3OWEA1',
-            class: 'btn btn-primary mb-2 white'
+  = button_tag 'Purchase Tickets',
+               class: 'btn btn-primary mb-2 white',
+               id: 'under-dev-warnings',
+               style: 'cursor:pointer; color:red;',
+               'data-toggle': 'modal',
+               'data-target': '#price-warning-modal'

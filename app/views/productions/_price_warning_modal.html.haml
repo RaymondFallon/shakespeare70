@@ -1,0 +1,30 @@
+.modal.fade{id: 'price-warning-modal',
+            style: 'padding-top: 4em;',
+            'aria-label': 'Price Warning Modal',
+            role: 'dialog',
+            tabindex: '-1'}
+  .modal-dialog{role: 'dialog'}
+    .modal-content
+      .modal-header
+        .container
+          .row
+            .col-12
+              .h3.text-center Please Note!
+      .modal-body
+        %p.text-center
+          Due to quirk in TCNJ's ticketing system, they have chosen to list the TCNJ student price
+          as $125.
+          %span{ style: 'color:red' } THIS IS NOT A REAL TICKET PRICE!
+          This outlandish price is intended to jar TCNJ students into remembering to
+          log in for their real ticket price ($5.00)
+          %hr
+        .text-center
+          If you are a TCNJ student, please log in to their site. Otherwise, please DISREGARD.
+          Thanks!
+      .modal-footer
+        %button.btn.btn-outline-secondary{ type: 'button', 'data-dismiss': 'modal' } Cancel
+        =link_to 'Got it! Continue to ticketing site.',
+                 'https://tcnjcenterforthearts.secure.force.com/ticket#sections_a0Ff200000MO3OWEA1',
+                 class: 'btn btn-primary white',
+                 target: '_blank'
+
