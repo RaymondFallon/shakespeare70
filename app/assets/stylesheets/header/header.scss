@@ -1,6 +1,3 @@
-$twitter-blue: #0084FF;
-$instagram-red: #cd486b;
-$instagram-purple: #8a3ab9;
 
 #s70-header {
   position: sticky;
@@ -28,21 +25,15 @@ $instagram-purple: #8a3ab9;
 
 nav ul {
   display: block;
-  text-align: right;
+
   margin-bottom: 0;
-  color: goldenrod;
+  padding-left: 0;
 }
 
 nav ul li {
   display: inline-block;
   padding: 0 1em;
   line-height: 3em;
-
-  text-align: right;
-}
-
-nav ul li a:visited {
-  color: goldenrod;
 }
 
 nav ul li a:hover {
@@ -55,20 +46,26 @@ nav ul li a:hover {
   margin-right: 25px;
 }
 
-
-#facebook_icon:hover {
-  color: white !important;
-  font-size: 2em;
+#burgerbars {
+  display: none;
 }
 
-#twitter_icon:hover {
-  color: $twitter-blue !important;
-  font-size: 2em;
-}
+@media (max-width: 50em) {
+  #burgerbars {
+    display: inline-block;
+  }
 
-#instagram_icon:hover {
-  font-size: 2em;
-  background: -webkit-linear-gradient($instagram-purple, $instagram-red);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  nav ul {
+    display: block;
+    margin-bottom: 0;
+    color: goldenrod;
+  }
+
+  nav ul li {
+    display: list-item;
+    padding: 0 1em;
+    line-height: 3em;
+
+    text-align: left;
+  }
 }
