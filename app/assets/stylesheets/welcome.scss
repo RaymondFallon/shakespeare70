@@ -5,11 +5,18 @@
 #welcome-header {
   font-size: 5em;
 }
-
 #welcome-body {
-  position: absolute;
-  top: 130px;
-  left: 10%;
-  width: 80%;
-  //transform: translate(-80%, -50%);
+
+  padding-top: 3em;
+}
+
+#welcome-page {
+  width: 100%;
+  height: 100%;
+
+  background: image_url('stock_photos/ancient-architecture-art-189532.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

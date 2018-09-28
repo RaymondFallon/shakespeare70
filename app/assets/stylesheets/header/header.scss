@@ -50,6 +50,10 @@ nav ul li a:hover {
   display: none;
 }
 
+i.menu-toggle {
+  cursor: pointer;
+}
+
 @media (max-width: 50em) {
   #s70-logo {
     margin-left: .5rem !important;

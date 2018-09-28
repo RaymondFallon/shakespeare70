@@ -1,6 +1,7 @@
 $twitter-blue: #0084FF;
-$instagram-red: #cd486b;
 $instagram-purple: #8a3ab9;
+$instagram-red: #cd486b;
+$instagram-yellow: #fccc63;
 
 #facebook_icon:hover {
   color: white !important;
@@ -14,7 +15,7 @@ $instagram-purple: #8a3ab9;
 
 #instagram_icon:hover {
   font-size: 2em;
-  background: -webkit-linear-gradient($instagram-purple, $instagram-red);
+  background: -webkit-linear-gradient($instagram-purple, $instagram-red, $instagram-yellow);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

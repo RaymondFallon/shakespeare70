@@ -3,7 +3,8 @@
 namespace :demo do
   desc 'Create demo data'
   task :recreate do
-    return unless Rails.env == 'development'
+    return unless Rails.env.development?
+
     p 'Dropping DB...'
     Rake::Task['db:drop'].invoke
     p 'Creating DB...'
