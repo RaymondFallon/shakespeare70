@@ -32,7 +32,12 @@ function addMenuToggleListeners() {
 
 function checkScreenSize() {
     if (window.matchMedia('(max-width:50em)').matches) {
-        setSmallHeader();
+        if (!document.getElementById('main-menu-close').classList.contains('hidden')) {
+            // We're already in small viewport
+        }
+        else {
+            setSmallHeader();
+        }
     }
     else {
         setLargeHeader();
