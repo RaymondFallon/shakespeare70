@@ -2,13 +2,13 @@
   #header-inner.row.justify-between
     %h1.h2.ml-3.mb-0.mt-2.ruslan#s70-logo
       =link_to "SHAKESPEARE '70", root_path, class: 'goldenrod red-hover', id: 's70-name'
-    %a#main-menu-open.menu-toggle.hidden
-      %i.fa.fa-2x.fa-bars.goldenrod.mt-3.pl-4
-    %a#main-menu-close.menu-toggle.hidden
-      %i.fa.fa-2x.fa-close.goldenrod.mt-3.pl-4
+    %a#main-menu-open.hidden.pl-4
+      %i.menu-toggle.fa.fa-2x.fa-bars.goldenrod.mt-3
+    %a#main-menu-close.hidden.pl-4
+      %i.menu-toggle.fa.fa-2x.fa-close.goldenrod.mt-3
     %nav.row.mt-1.poppins#main-menu
       %ul
-        %li.nav-item
+        %li.nav-item{ style: 'list-style-type:none;' }
           %span{ class: 'no-decoration mr-4',
                  id: 'under-dev-warnings',
                  style: 'cursor:pointer; color:red;',
