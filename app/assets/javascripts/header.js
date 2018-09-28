@@ -10,9 +10,9 @@ $(window).resize(function(){
 
 function addMenuToggleListeners() {
     $('#main-menu-open').on('click', function() {
-        var menu = document.getElementById('main-menu');
-        var menu_open = document.getElementById('main-menu-open');
-        var menu_close = document.getElementById('main-menu-close');
+        var menu = get_by_id('main-menu');
+        var menu_open = get_by_id('main-menu-open');
+        var menu_close = get_by_id('main-menu-close');
 
         menu.classList.remove('hidden');
         menu_close.classList.remove('hidden');
@@ -20,9 +20,9 @@ function addMenuToggleListeners() {
     });
 
     $('#main-menu-close').on('click', function() {
-        var menu = document.getElementById('main-menu');
-        var menu_open = document.getElementById('main-menu-open');
-        var menu_close = document.getElementById('main-menu-close');
+        var menu = get_by_id('main-menu');
+        var menu_open = get_by_id('main-menu-open');
+        var menu_close = get_by_id('main-menu-close');
 
         menu.classList.add('hidden');
         menu_close.classList.add('hidden');
@@ -32,7 +32,7 @@ function addMenuToggleListeners() {
 
 function checkScreenSize() {
     if (window.matchMedia('(max-width:50em)').matches) {
-        if (!document.getElementById('main-menu-close').classList.contains('hidden')) {
+        if (!get_by_id('main-menu-close').classList.contains('hidden')) {
             // We're already in small viewport
         }
         else {
@@ -45,14 +45,18 @@ function checkScreenSize() {
 }
 
 function setSmallHeader(){
-    document.getElementById('main-menu').classList.add('hidden');
-    document.getElementById('main-menu-open').classList.remove('hidden');
-    document.getElementById('s70-name').text = "S'70"
+    get_by_id('main-menu').classList.add('hidden');
+    get_by_id('main-menu-open').classList.remove('hidden');
+    get_by_id('s70-name').text = "S'70"
 }
 
 function setLargeHeader(){
-    document.getElementById('main-menu').classList.remove('hidden');
-    document.getElementById('main-menu-open').classList.add('hidden');
-    document.getElementById('main-menu-close').classList.add('hidden');
-    document.getElementById('s70-name').text = "SHAKESPEARE '70"
+    get_by_id('main-menu').classList.remove('hidden');
+    get_by_id('main-menu-open').classList.add('hidden');
+    get_by_id('main-menu-close').classList.add('hidden');
+    get_by_id('s70-name').text = "SHAKESPEARE '70"
+}
+
+function get_by_id(element_id){
+    return document.getElementById(element_id);
 }
