@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get :black_box_directions, to: 'static_pages#black_box_directions', as: :black_box_directions
   get :community, to: 'static_pages#community', as: :community
   get :donations, to: 'static_pages#donations', as: :donations
+  get :broken_link, to: 'static_pages#broken_link', as: :broken_link
 
   resources :members, only: [:index, :show] do
     resources :castings, only: [:index, :show]
