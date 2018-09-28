@@ -1,6 +1,6 @@
 $( document ).on('turbolinks:load', function() {
     addMenuToggleListeners();
-    if (window.matchMedia('(max-width:50em)')) {
+    if (window.matchMedia('(max-width:50em)').matches) {
         document.getElementById('main-menu').classList.add('hidden');
         document.getElementById('main-menu-open').classList.remove('hidden');
         document.getElementById('s70-name').text = "S'70"
