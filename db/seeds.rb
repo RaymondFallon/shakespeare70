@@ -47,6 +47,7 @@ Position.where(code: 'SD', description: 'Set Designer').first_or_create!(bio_ord
 Position.where(code: 'SD2', description: 'Scenic Design').first_or_create!(bio_order: 71)
 Position.where(code: 'SM', description: 'Stage Manager').first_or_create!(bio_order: 20)
 Position.where(code: 'SnD', description: 'Sound Designer').first_or_create!(bio_order: 60)
+Position.where(code: 'TA', description: 'Technical Advisor').first_or_create!(bio_order: 31)
 Position.where(code: 'TD', description: 'Technical Director').first_or_create!(bio_order: 30)
 Position.where(code: 'V', description: 'Videographer').first_or_create!(bio_order: 90)
 
