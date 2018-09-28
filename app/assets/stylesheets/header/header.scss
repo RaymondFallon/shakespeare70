@@ -41,17 +41,21 @@ nav ul li a:hover {
   text-decoration: none;
 }
 
-#main-navigation {
+#main-menu {
   margin-left: auto;
   margin-right: 25px;
 }
 
-#burgerbars {
+#main-menu-open {
   display: none;
 }
 
 @media (max-width: 50em) {
-  #burgerbars {
+  #s70-logo {
+    margin-left: .5rem !important;
+  }
+
+  #main-menu-open {
     display: inline-block;
   }
 
@@ -67,5 +71,11 @@ nav ul li a:hover {
     line-height: 3em;
 
     text-align: left;
+  }
+}
+
+@media (min-width: 50em) {
+  .menu-toggle {
+    display: none;
   }
 }
