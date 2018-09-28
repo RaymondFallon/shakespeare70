@@ -10,7 +10,7 @@ kayla = Member.where(first_name: 'Kayla', last_name: 'Elizabeth')
 s70 = Company.where(name: "Shakespeare '70").first_or_create!
 nytf = Company.where(name: 'New York Thespis Festival').first_or_create!
 pt = Company.where(name: 'Pegasus Theatre Company').first_or_create!
-pcm = Company.where(name: 'PCM Theater Company').first_or_create!
+pcm = Company.where(name: 'PCM Theatre Company').first_or_create!
 
 s70_bt = BioType.where(code: 'S70', description: 'Shakespeare 70').first_or_create!
 oc_bt = BioType.where(code: 'OC', description: 'Other Company').first_or_create!

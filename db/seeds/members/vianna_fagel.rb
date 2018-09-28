@@ -32,7 +32,7 @@ end
   ['Pennington Players', oc_bt, sm, 'Violet'],
   ['Playful Theater Productions', oc_bt, actor, 'Big Fish', 'Josephine'],
   ['Playful Theater Productions', oc_bt, actor, 'Jesus Christ Superstar', 'Mary Magdalene'],
-  ['PinnWorth Production', oc_bt, actor, 'A Funny Thing ... Forum', 'Panacea'],
+  ['PinnWorth Productions', oc_bt, actor, 'A Funny Thing ... Forum', 'Panacea'],
   ['TCNJ Musical Theatre', oc_bt, actor, 'Footloose', 'Vi'],
   ['TCNJ Musical Theatre', oc_bt, actor, 'Pippin', 'Berthe'],
   ['TCNJ Musical Theatre', oc_bt, actor, 'Bare', 'Claire']
