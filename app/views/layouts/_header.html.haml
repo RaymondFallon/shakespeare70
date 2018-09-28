@@ -1,32 +1,24 @@
 %header#s70-header
   #header-inner.row.justify-between
-    %div.h2.ml-3.mb-0.mt-2.ruslan#s70-logo
-      =link_to "SHAKESPEARE '70", root_path, class: 'goldenrod red-hover'
-    %nav.row.mt-1.poppins#main-navigation
+    %h1.h2.ml-3.mb-0.mt-2.ruslan#s70-logo
+      =link_to "SHAKESPEARE '70", root_path, class: 'goldenrod red-hover', id: 's70-name'
+    %a#main-menu-open.menu-toggle.hidden
+      %i.fa.fa-2x.fa-bars.goldenrod.mt-3.pl-4
+    %a#main-menu-close.menu-toggle.hidden
+      %i.fa.fa-2x.fa-close.goldenrod.mt-3.pl-4
+    %nav.row.mt-1.poppins#main-menu
       %ul
-        %span{ class: 'no-decoration mr-4',
-               id: 'under-dev-warnings',
-               style: 'cursor:pointer; color:red;',
-               'data-toggle': 'modal',
-               'data-target': '#dev_modal' }
-          %i.fa.fa-exclamation-triangle{ 'aria-hidden': 'true' }
-          %i.fa.fa-exclamation-triangle{ 'aria-hidden': 'true' }
-          %i.fa.fa-exclamation-triangle{ 'aria-hidden': 'true' }
-        = link_to 'https://www.facebook.com/Shakespeare70/',
-                  class: 'no-decoration goldenrod',
-                  title: 'Facebook',
-                  target: '_blank' do
-          %i#facebook_icon.fa.fa-facebook.ml-2{ 'aria-hidden': 'true' }
-        = link_to 'https://twitter.com/Shakespeare70',
-                  class: 'no-decoration goldenrod',
-                  title: 'Twitter',
-                  target: '_blank' do
-          %i#twitter_icon.fa.fa-twitter.ml-2{ 'aria-hidden': 'true' }
-        =link_to 'https://www.instagram.com/shakespeare70inc/',
-                 class: 'no-decoration goldenrod',
-                 title: 'Instagram',
-                 target: '_blank' do
-          %i#instagram_icon.fa.fa-instagram.ml-2.mr-2{ 'aria-hidden': 'true' }
+        %li.nav-item
+          %span{ class: 'no-decoration mr-4',
+                 id: 'under-dev-warnings',
+                 style: 'cursor:pointer; color:red;',
+                 'data-toggle': 'modal',
+                 'data-target': '#dev_modal' }
+            %i.fa.fa-exclamation-triangle{ 'aria-hidden': 'true' }
+            %i.fa.fa-exclamation-triangle{ 'aria-hidden': 'true' }
+            %i.fa.fa-exclamation-triangle{ 'aria-hidden': 'true' }
+        %li.nav-item
+          = render partial: 'layouts/social_media_btns'
         %li.collection.nav-item.inline-block= link_to 'Coming Soon',
                                                       clybourne_page,
                                                       class: 'goldenrod red-hover'
@@ -42,4 +34,3 @@
         %li.collection.nav-item.inline-block= link_to 'Donate',
                                                       donations_path,
                                                       class: 'goldenrod red-hover'
-
