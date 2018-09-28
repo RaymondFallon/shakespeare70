@@ -41,3 +41,17 @@ pm =       Position.where(code: 'PM', description: 'Production Manager').first_o
                 position: casting[1],
                 bio_type: casting[0]).first_or_create!(role: casting[3])
 end
+
+[
+  ['End Of The World Theater', oc_bt, actor, 'Lemonade!', 'Chic/Ensemble'],
+  ['TCNJ Musical Theatre', oc_bt, actor, 'Star Wars! The Musical!', 'Han Solo'],
+  ['Theater To Go', oc_bt, actor, 'A Streetcar Named Desire', 'Brick'],
+  ['Philadelphia Plays & Players', oc_bt, actor, 'Superheroes Who Are Super', 'Ensemble'],
+  ['Four Letter Theatre', oc_bt, actor, 'Twylight Zone: Return To The 6th Dimension', 'Don / Mechanic']
+].each do |casting|
+  Casting.where(member: ray,
+                production: Production.where(company: Company.where(name: casting[0]).first_or_create!,
+                                             title: casting[3]).first_or_create!,
+                position: casting[2],
+                bio_type: casting[1]).first_or_create!(role: casting[4])
+end
