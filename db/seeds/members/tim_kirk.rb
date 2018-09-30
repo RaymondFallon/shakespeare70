@@ -2,7 +2,7 @@
 
 # Initial Bio For Tim Kirk
 
-tim = Member.where(first_name: 'Tim', last_name: 'Kirk')
+tim = Member.where(first_name: 'Timothy', last_name: 'Kirk')
             .first_or_create!(title: 'Actor',
                               featured: 'Y',
                               bio: "TIM HASN'T WRITTEN A BIO!")
