@@ -1,9 +1,16 @@
 .container
-  .row
+  .row.mt-4
     .col-12
-      %h1.text-center.mt-4
-        The Page You've Requested Cannot Be Found
+      %h1.text-center.ruslan.mt-4
+        Page Not Found
       .h3.text-center.mt-4
-        Ah Jeez... OK, what happened?
-      %p
-        Well, this is our sexy new website. It's brand new and completely disconnected from our old site
+        Ah Jeez... sorry about that.
+      %p.text-center.mt-4
+        As of Fall 2018, S'70 is running on a brand new website, shifting from Wordpress to Rails. As a result,
+        many of the old links that search engines direct you to no longer work. But that's OK! We have a whole
+        slew of new pages! Why don't you check out a random one below?
+
+      .row.mt-4
+        - 6.times do
+          .col-3.col-md-2
+            RANDOM PAGE
