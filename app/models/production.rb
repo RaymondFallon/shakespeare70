@@ -5,10 +5,15 @@ class Production < ApplicationRecord
   has_many :castings
 
   scope :by_s70, -> { where(company: Company.find_by(name: "Shakespeare '70")) }
+  scope :has_all_data, -> { where(has_all_data: 'Y') }
 
   def poster
     path = "production_posters/#{year}/#{title.downcase.split.join('_').gsub(/[\:\']/, '')}.jpg"
     File.exist?("app/assets/images/#{path}") ? path : 'production_posters/get_a_poster.jpg'
+  end
+
+  def photo
+    poster
   end
 
   def cast_list

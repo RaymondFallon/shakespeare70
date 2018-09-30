@@ -17,5 +17,5 @@ Rails.application.routes.draw do
   resources :productions, only: [:index, :show]
   resources :venues, only: [:index, :show]
 
-  get '*path', to: 'welcome#show'
+  get '*path', to: 'static_pages#broken_link'
 end

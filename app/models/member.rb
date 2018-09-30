@@ -14,6 +14,10 @@ class Member < ApplicationRecord
     File.exist?("app/assets/images/#{path}") ? path : 'member_photos/shakespeare.jpg'
   end
 
+  def photo
+    photo_url
+  end
+
   def ex_comm?
     exec_committee == 'Y'
   end
