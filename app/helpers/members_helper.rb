@@ -14,6 +14,16 @@ module MembersHelper
     role_or_job = casting.role || "(#{casting.position.description})"
     content_tag(:em, casting.production.title + ':', class: 'black mr-2') +
       role_or_job +
-      content_tag(:strong, " (#{casting.production.company.name})", class: 'black')
+      other_company_text_or_link(casting)
+  end
+
+  private
+
+  def other_company_text_or_link(casting)
+    company = casting.production.company
+    return content_tag(:strong, " (#{company.name})", class: 'black') unless company.website_url
+
+    link_to(" (#{company.name})", company.website_url, class: 'black no-decoration hover-shadow',
+                                                       target: '_blank')
   end
 end
