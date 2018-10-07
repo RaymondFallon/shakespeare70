@@ -19,7 +19,7 @@ vortex = Production.where(company: s70,
   ['Helen Saville', 'Heather', 'Duncan'],
   ['Pauncefort “Pawnie” Quentin', 'Rupert', 'Hinton'],
   ['Clara Hibbert', 'Morgan', 'Petronis'],
-  ['David Lancaster', 'Frederick', 'Bartlett'],
+  ['David Lancaster', 'Fred', 'Bartlett'],
   ['Bruce Fairlight', 'Andrew', 'Timmes'],
   ['Preston', 'Stephanie', 'Schoppe']
 ].each_with_index do |casting, idx|

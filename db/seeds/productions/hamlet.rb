@@ -31,7 +31,7 @@ hamlet = Production.where(company: s70,
   ['Player Queen', 'Amanda', 'McCarther'],
   ['Gravedigger', 'Matthew', 'Cassidy'],
   ['The Gravedigger’s Assistant', 'Steve', 'Munoz'],
-  ['Lady-in-waiting to Gertrude', 'Jaclyn', 'Wasneski'],
+  ['Lady-in-waiting to Gertrude', 'Jackie', 'Wasneski'],
   ['Lady-in-waiting to Ophelia', 'Vianna', 'Fagel'],
   ['Lady-in-waiting to Ophelia', 'Brittany', 'Rivera'],
   ['Soldier', 'Tristan', 'Curbishley']
