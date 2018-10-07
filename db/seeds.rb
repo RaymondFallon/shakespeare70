@@ -40,6 +40,7 @@ BioType.where(code: 'NF', description: 'Not Featured').first_or_create!
 
 
 Dir[Rails.root.join('db/seeds/companies.rb')].each { |f| require f }
+Dir[Rails.root.join('db/seeds/typo_fixes.rb')].each { |f| require f }
 Dir[Rails.root.join('db/seeds/venues/**')].each { |f| require f }
 Dir[Rails.root.join('db/seeds/productions/s70_productions.rb')].each { |f| require f } # S70 Productions Without Castings
 Dir[Rails.root.join('db/seeds/members/**')].each { |f| require f }
