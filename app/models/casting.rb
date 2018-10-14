@@ -13,6 +13,9 @@ class Casting < ApplicationRecord
   scope :with_s70,    -> { where(bio_type: BioType.find_by(code: 'S70')) }
   scope :with_others, -> { where(bio_type: BioType.find_by(code: 'OC')) }
 
+  scope :selected, -> { where selected: 'Y' }
+  scope :not_selected, -> { where selected: nil }
+
   scope :acting_gig, -> { where(position: Position.find_by(code: 'A')) }
   scope :pro_staff, lambda {
     joins(:position).where.not(position: Position.find_by(code: 'A'))

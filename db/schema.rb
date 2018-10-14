@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20180802015909) do
     t.bigint "bio_type_id"
     t.string "role"
     t.integer "cast_order"
+    t.string "selected", limit: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["bio_type_id"], name: "index_castings_on_bio_type_id"
