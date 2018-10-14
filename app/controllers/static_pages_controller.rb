@@ -10,4 +10,7 @@ class StaticPagesController < ApplicationController
 
   def broken_link
   end
+
+  def auditions
+  end
 end
