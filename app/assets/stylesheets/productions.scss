@@ -31,3 +31,15 @@ ul.cast-list {
   -o-transform: rotate(205deg);
   transform: rotate(205deg);
 }
+
+.production-pill:hover {
+  .img-fluid {
+    color: black;
+    text-decoration: none;
+    box-shadow: 5px 5px 5px darkgrey;
+  }
+
+  .show-title {
+    text-shadow: 1px 1px lightgrey;
+  }
+}
