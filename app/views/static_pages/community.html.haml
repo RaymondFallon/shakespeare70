@@ -1,41 +1,20 @@
+.container
+  .row
+    .col-12
+      %hr
+      %h1.text-center.ruslan S70 in the Community
+      %hr
 
-%div
-  = image_tag 's70_photos/Eden_Pearl_From_Above.jpg', style: 'width:100%'
-  %div#page-body
-    .container.text-center{style: 'background-color: rgba(0,0,0,.8);'}
-      .row
-        .col-12.p-0.pt-3{style: 'color:white'}
-          .row
-            .col-12
-              %h2 Working with Eden
-          .row
-            .col-12
-              Janet can say some stuff here
-          .row
-            .col-12
-              and here
-          .row
-            .col-12.text-right
-              and here
-          .row
-            .col-12.text-left
-              and here
-          .row
-            .col-12.text-right
-              and here
-          .row
-            .col-12
-              and here
-          .row
-            .col-12.text-right
-              and here
-          .row
-            .col-12.text-left
-              and here
-          .row
-            .col-12.text-right
-              and here...
-        .col-12.p-0.pb-3.pt-3
-          = link_to 'Visit Eden', 'https://edenautism.org/', class: 'btn btn-primary white',
-                                                             target: '_blank'
+= render partial: 'components/card_with_side_image',
+  locals: { image_path: 's70_photos/eden_logo',
+            img_link: 'https://edenautism.org/',
+            body: "As part of our on-going commitment to outreach and service in the community, Shakespeare '70 is proud of our work at the Eden Dreams Gala.  Each year for more than a decade now, actors from S70 have volunteered and shared their talents on the evening of the event; “Eden Dreams” is a key fundraising event for Eden Autism Services, and is held each January for the past 31 years." }
 
+= render partial: 'components/card_with_side_image',
+  locals: { img_right: true,
+            image_path: 's70_photos/jen_ian',
+            body: "Eden Autism Services, headquartered in Princeton, NJ, serves and supports people with autism, and their families, thru'out their lifetimes; they now have over 40 years of service in the area and beyond.  They offer a twelve-month school program for 3 to 21 year olds, vocational training for adolescents and adults, residential services for adults, and numerous other resources for autistic children and adults and their families." }
+
+= render partial: 'components/card_with_side_image',
+  locals: { image_path: 's70_photos/curt_scott_necklace',
+            body: "At the “Eden Dreams” event, each year focused on a different theme, actors in costume mingle and interact  improvisationally with guests, and provide bits of information they may need to solve a Dream Search puzzle – one of many activities presented that evening.  The Dream Search and its actors are an element unique to “Eden Dreams”." }

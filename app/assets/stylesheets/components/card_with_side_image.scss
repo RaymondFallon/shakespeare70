@@ -1,0 +1,16 @@
+.img-card-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  align-items: center;
+}
+
+.img-card-right-row {
+  flex-direction: row-reverse;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+  }
+}
+
