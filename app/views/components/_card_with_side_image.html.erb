@@ -13,7 +13,7 @@
         <%= image_tag(image_path, class: 'img-fluid rounded-1r mt-2 mb-2') %>
       <% end %>
     </div>
-    <div class="col-12 col-md-7 body-of-img-card text-center">
+    <div class="col-12 col-md-7 body-of-img-card <%= img_right ?  'text-left' : 'text-right' %>">
       <%= body %>
     </div>
   </div>
