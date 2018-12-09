@@ -1,0 +1,9 @@
+
+%div.casting_credit
+  = other_company_text_or_link(production)
+  %em= production.title + ':'
+  - castings.acting_gig.each do |casting|
+    = casting.role + (castings.size > 1 ? ',' : '' )
+  - if castings.pro_staff.any?
+    - castings.pro_staff.each_with_index do |casting, idx|
+      = casting.position.description + (idx == castings.pro_staff.length - 1 ? '' : ',')

@@ -6,6 +6,8 @@ class Casting < ApplicationRecord
   belongs_to :position
   belongs_to :bio_type
 
+  delegate :company, to: :production
+
   default_scope do
     joins(:production).order('productions.year DESC NULLS LAST, productions.start_date DESC NULLS LAST')
   end

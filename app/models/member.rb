@@ -2,6 +2,7 @@
 
 class Member < ApplicationRecord
   has_many :castings
+  has_many :productions, through: :castings
 
   scope :featured, -> { where(featured: 'Y') }
 
