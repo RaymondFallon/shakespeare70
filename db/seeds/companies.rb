@@ -3,6 +3,7 @@ Company.where(name: "Shakespeare '70").first_or_create!
 Company.where(name: 'ActorsNET of Bucks County').first_or_create!.update(website_url: 'http://www.actorsnetbucks.org/')
 Company.where(name: 'Algonquin Arts').first_or_create!
 Company.where(name: 'Circle Players').first_or_create!
+Company.where(name: 'DSPN').first_or_create!.update(website_url: 'https://havespellbook.com/')
 Company.where(name: 'Eden Dreams Benefit Gala').first_or_create!
 Company.where(name: 'Greenpoint Plays in Brooklyn').first_or_create!
 Company.where(name: 'Holmes County Arts Center').first_or_create!
