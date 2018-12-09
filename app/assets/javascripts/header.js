@@ -47,7 +47,7 @@ function checkScreenSize() {
 function setSmallHeader(){
     get_by_id('main-menu').classList.add('hidden');
     get_by_id('main-menu-open').classList.remove('hidden');
-    get_by_id('s70-name').text = "S'70"
+    get_by_id('s70-name').text = "S70"
 }
 
 function setLargeHeader(){
