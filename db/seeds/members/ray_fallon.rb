@@ -3,10 +3,11 @@
 # Initial Bio For Ray Fallon
 
 ray = Member.where(first_name: 'Ray', last_name: 'Fallon')
-            .first_or_create!(exec_committee: 'Y',
-                              featured: 'Y',
+            .first_or_create!(featured: 'Y',
                               title: 'Actor • Webmaster',
                               bio: "Ray has a real Bachelor’s from TCNJ (English, ‘09) and a fake Bachelor’s from MIT (Computer Science, ‘17). He got involved with S’70 though a TCNJ internship program in ’08 and has gone from intern to member to Executive Committee member. He had a brief stint in Los Angeles, but mostly acts in South and Central Jersey.  Ray made this website and takes criticism well, so… let’em hear it!")
+
+ray.update(exec_committee: nil)
 
 s70 = Company.where(name: "Shakespeare '70").first_or_create!
 
