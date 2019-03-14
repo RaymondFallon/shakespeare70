@@ -1,16 +1,17 @@
+# frozen_string_literal: true
+
 class StaticPagesController < ApplicationController
-  def donations
-  end
+  def donations; end
 
-  def community
-  end
+  def community; end
 
-  def black_box_directions
-  end
+  def black_box_directions; end
 
-  def broken_link
-  end
+  def broken_link; end
 
-  def auditions
+  def auditions; end
+
+  def welcome
+    @clybourne = Production.find_by(title: 'Clybourne Park')
   end
 end

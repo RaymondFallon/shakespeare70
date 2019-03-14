@@ -1,0 +1,37 @@
+.container
+  .row
+    .col-12
+      %hr
+      %h1.text-center.ruslan Shakespeare '70
+      %hr
+
+.container.text-center
+  .row
+    .col-10.offset-1
+      %p= welcome_text1
+    .col-12.col-md-4.offset-md-1
+      = image_tag 'stock_photos/ancient-architecture-art-189532.jpg',
+                  class: 'img-fluid rounded-1r mt-2 mb-2'
+    .col-12.col-md-4.offset-md-2.mt-4
+      %p
+        .h5 UP NEXT:
+        .h3.ruslan MACBETH
+
+  .row
+    .col-12
+      %hr
+    .col-10.offset-1
+      %p= welcome_text2
+  .row
+    .col-12.col-md-5
+      = image_tag 'productions/clybourne_park/what.jpg',
+                  class: 'img-fluid rounded-1r mt-2 mb-2'
+    .col-4.offset-4.col-md-2.offset-md-0
+      = link_to @clybourne do
+        =image_tag @clybourne.poster, class: 'img-fluid rounded-1r my-4',
+                                      alt: "#{@clybourne.title} Poster"
+    .col-12.col-md-5
+      = image_tag 'productions/clybourne_park/now_wait.jpg',
+                  class: 'img-fluid rounded-1r mt-2 mb-2'
+    .col-12
+      %hr
