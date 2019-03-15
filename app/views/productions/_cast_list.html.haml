@@ -12,6 +12,9 @@
           .col-6.text-right #{casting.role}
           .col-6.text-left.member-link= link_to casting.member.name, casting.member
 
+.row
+  .col-8.offset-2
+    %hr.m-0
 %ul.cast-list.mt-3.p-0
   - production.pro_staff.each do |casting|
     %li
