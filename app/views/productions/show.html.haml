@@ -1,5 +1,4 @@
-- if true
-  = render partial: 'photo_block'
+
 .container
   .row
     .col-12
@@ -21,3 +20,6 @@
         %strong= @production.venue.name
     .col-10.offset-1.col-sm-4.offset-sm-1.mb-2
       = image_tag @production.poster, class: 'img-fluid', alt: "#{@production.title} Poster"
+
+- if @photos.any?
+  = render partial: 'shared/photo_block', locals: { photos: @photos }

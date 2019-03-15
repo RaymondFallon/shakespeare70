@@ -1,4 +1,8 @@
+# frozen_string_literal: true
+
 class Production < ApplicationRecord
+  self.table_name = :productions
+
   belongs_to :company
   belongs_to :venue, optional: true
 

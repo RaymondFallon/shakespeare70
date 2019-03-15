@@ -59,12 +59,12 @@ ActiveRecord::Schema.define(version: 20190315141950) do
   end
 
   create_table "photo_appearances", force: :cascade do |t|
-    t.bigint "photo_id"
+    t.bigint "production_photo_id"
     t.bigint "casting_id"
     t.string "is_featured", limit: 1, default: "Y"
     t.integer "order_in_photo"
     t.index ["casting_id"], name: "index_photo_appearances_on_casting_id"
-    t.index ["photo_id"], name: "index_photo_appearances_on_photo_id"
+    t.index ["production_photo_id"], name: "index_photo_appearances_on_production_photo_id"
   end
 
   create_table "positions", force: :cascade do |t|

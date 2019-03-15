@@ -1,9 +1,15 @@
 # frozen_string_literal: true
 
 class PhotoAppearance < ApplicationRecord
-  belongs_to :photo, class_name: 'ProductionPhoto'
-  belongs_to :casting
+  self.table_name = :photo_appearances
+
+  belongs_to :production_photo, inverse_of: :appearances
+  belongs_to :casting, inverse_of: :photo_appearances
 
   delegate :production, to: :photo
   delegate :member, to: :casting
+
+  def photo
+    production_photo
+  end
 end

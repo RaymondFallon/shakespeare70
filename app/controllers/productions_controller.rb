@@ -6,7 +6,7 @@ class ProductionsController < ApplicationController
   def show
     @production = Production.find(params[:id])
     @photos = @production.photos&.sample(3)
-    render 'productions/current_show' if @production.title == 'Clybourne Park'
+    # render 'productions/current_show' if @production.title == 'Clybourne Park'
   end
 
   # private

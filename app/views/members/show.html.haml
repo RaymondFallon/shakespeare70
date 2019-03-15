@@ -13,3 +13,10 @@
     .col-sm-12.col-md-7
       %p.deep-grey.card-text.text-center= @member.bio&.html_safe
       = render partial: 'bio_credits', locals: { member: @member }
+
+- if @photos.any?
+  .container
+    .row
+      .col-12
+        %hr
+  = render partial: 'shared/photo_block', locals: { photos: @photos }

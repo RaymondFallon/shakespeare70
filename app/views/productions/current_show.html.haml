@@ -1,3 +1,5 @@
+- if @photos.any?
+  = render partial: 'shared/photo_block', locals: { photos: @photos }
 
 .container
   .row
@@ -5,8 +7,6 @@
       %hr
       %h1.ruslan.text-center= @production.title
       %hr
--#.text-center.mt-3.mb-3.ruslan
--#  %h1= @production.title
 
 .container-fluid
   .row

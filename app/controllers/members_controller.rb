@@ -5,5 +5,6 @@ class MembersController < ApplicationController
 
   def show
     @member = Member.find(params[:id])
+    @photos = @member.random_photos(3)
   end
 end

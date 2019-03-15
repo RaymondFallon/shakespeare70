@@ -1,10 +1,15 @@
 # frozen_string_literal: true
 
 class Casting < ApplicationRecord
-  belongs_to :member
+  self.table_name = :castings
+
+  belongs_to :member, inverse_of: :castings
   belongs_to :production
   belongs_to :position
   belongs_to :bio_type
+
+  has_many :photo_appearances, dependent: :restrict_with_exception, inverse_of: :casting
+  has_many :production_photos, through: :photo_appearances
 
   delegate :company, to: :production
 

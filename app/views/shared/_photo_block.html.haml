@@ -1,0 +1,18 @@
+-# parameters for partial:
+-# photos: array of 1-3 ProductionPhotos
+
+.container-fluid
+  .row.mb-4
+    - if photos.size < 3
+      %div{ class: "offset-md-#{photos.size == 2 ? '2': '4'}" }
+    - photos.each_with_index do |photo, idx|
+      .col-12.col-md-4
+        .row
+          .col-12
+            %img{ src: photo.url,
+                  alt: photo.description,
+                  class: 'img-fluid rounded-1r mt-2 mb-2' }
+          .col-12= photo.description
+          - unless idx == 2
+            .col-12.d-md-none
+              %hr
