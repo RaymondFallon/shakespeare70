@@ -49,3 +49,4 @@ Dir[Rails.root.join('db/seeds/productions/s70_productions.rb')].each { |f| requi
 Dir[Rails.root.join('db/seeds/members/**')].each { |f| require f }
 Dir[Rails.root.join('db/seeds/productions/**')].each { |f| require f } # Castings for all of the shows
 Dir[Rails.root.join('db/seeds/castings/**')].each { |f| require f }
+Dir[Rails.root.join('db/seeds/photos/**')].each { |f| require f }

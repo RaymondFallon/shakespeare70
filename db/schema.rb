@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180802015909) do
+ActiveRecord::Schema.define(version: 20190315141950) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,15 @@ ActiveRecord::Schema.define(version: 20180802015909) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "photo_appearances", force: :cascade do |t|
+    t.bigint "photo_id"
+    t.bigint "casting_id"
+    t.string "is_featured", limit: 1, default: "Y"
+    t.integer "order_in_photo"
+    t.index ["casting_id"], name: "index_photo_appearances_on_casting_id"
+    t.index ["photo_id"], name: "index_photo_appearances_on_photo_id"
+  end
+
   create_table "positions", force: :cascade do |t|
     t.string "code"
     t.string "description"
@@ -65,6 +74,12 @@ ActiveRecord::Schema.define(version: 20180802015909) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["code"], name: "index_positions_on_code", unique: true
+  end
+
+  create_table "production_photos", force: :cascade do |t|
+    t.string "url"
+    t.bigint "production_id"
+    t.index ["production_id"], name: "index_production_photos_on_production_id"
   end
 
   create_table "productions", force: :cascade do |t|

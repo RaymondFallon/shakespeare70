@@ -5,10 +5,11 @@ class ProductionsController < ApplicationController
 
   def show
     @production = Production.find(params[:id])
+    @photos = @production.photos&.sample(3)
     render 'productions/current_show' if @production.title == 'Clybourne Park'
   end
 
-  private
+  # private
   # Never trust parameters from the scary internet, only allow the white list through.
   # def production_params
   #   params.require(:production).permit(:title, :start_date, :end_date, :member_id)

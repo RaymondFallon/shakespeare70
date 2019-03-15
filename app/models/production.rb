@@ -2,7 +2,8 @@ class Production < ApplicationRecord
   belongs_to :company
   belongs_to :venue, optional: true
 
-  has_many :castings
+  has_many :castings, dependent: :restrict_with_exception
+  has_many :photos, class_name: 'ProductionPhoto', dependent: :restrict_with_exception
 
   scope :by_s70, -> { where(company: Company.find_by(name: "Shakespeare '70")) }
   scope :has_all_data, -> { where(has_all_data: 'Y') }

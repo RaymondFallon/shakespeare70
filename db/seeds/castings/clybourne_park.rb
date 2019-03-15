@@ -52,7 +52,7 @@ Casting.where(member: Member.where(first_name: 'Ray', last_name: 'Fallon').first
               production: cp
 ).first_or_create!(role: 'Jim / Tom', cast_order: 7)
 
-Casting.where(member: Member.where(first_name: 'Chris', last_name: 'Loos').first_or_create!,
+Casting.where(member: Member.where(first_name: 'Christopher', last_name: 'Loos').first_or_create!,
               position: actor,
               bio_type: this_season,
               production: cp
