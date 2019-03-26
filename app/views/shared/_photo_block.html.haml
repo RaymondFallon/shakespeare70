@@ -13,6 +13,6 @@
                   alt: photo.description,
                   class: 'img-fluid rounded-1r mt-2 mb-2' }
           .col-12= photo.description
-          - unless idx == 2
+          - unless idx == photos.size - 1
             .col-12.d-md-none
               %hr
