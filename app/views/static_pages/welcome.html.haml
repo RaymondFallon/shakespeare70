@@ -18,9 +18,9 @@
         coming to the Kelsey Theatre this June 21st - 30th!
   .d-flex.flex-col.justify-content-around
     = link_to @macbeth, class: 'production-pill' do
-      =image_tag @macbeth.poster, class: 'img-fluid rounded-1r shadow-2',
-                                  style: 'max-width: 300px;',
-                                  alt: "#{@macbeth.title} Poster"
+      = image_tag @macbeth.poster, class: 'img-fluid rounded-1r shadow-2',
+                                   style: 'max-width: 300px;',
+                                   alt: "#{@macbeth.title} Poster"
 
 
   .row
@@ -34,8 +34,8 @@
                   class: 'img-fluid rounded-1r mt-2 mb-2'
     .col-4.offset-4.col-md-2.offset-md-0.production-pill
       = link_to @clybourne do
-        =image_tag @clybourne.poster, class: 'img-fluid rounded-1r my-4',
-                                      alt: "#{@clybourne.title} Poster"
+        = image_tag @clybourne.poster, class: 'img-fluid rounded-1r my-4',
+                                       alt: "#{@clybourne.title} Poster"
     .col-12.col-md-5
       = image_tag 'productions/clybourne_park/now_wait.jpg',
                   class: 'img-fluid rounded-1r mt-2 mb-2'
