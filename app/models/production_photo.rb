@@ -17,9 +17,10 @@ class ProductionPhoto < ApplicationRecord
 
   def description_with_roles
     castings = appearances.order(:order_in_photo).map(&:casting)
+    size = castings.size
     castings.each_with_object([]).with_index do |(casting, arr), idx|
-      arr << "#{'and' if idx == castings.size - 1} #{casting.member.name} as #{casting.role}"
-    end.join(castings.size > 2 ? ', ' : ' ')
+      arr << "#{'and' if idx == size - 1 && size != 1} #{casting.member.name} as #{casting.role}"
+    end.join(size > 2 ? ', ' : ' ')
   end
 
   def description_without_roles

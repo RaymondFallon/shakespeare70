@@ -4,7 +4,7 @@ s70 = Company.find_by(name: "Shakespeare '70")
 
 kelsey = Venue.find_by(name: 'Kelsey Theatre')
 
-this_s = BioType.find_by(code: 'TS')
+s70_bt = BioType.find_by(code: 'S70')
 
 merry_wives = Production.where(company: s70,
                                venue: kelsey,
@@ -37,8 +37,9 @@ merry_wives = Production.where(company: s70,
 ].each_with_index do |casting, idx|
   Casting.where(member: Member.where(first_name: casting[1], last_name: casting[2]).first_or_create!,
                 production: merry_wives,
-                position: Position.find_by(code: 'A'),
-                bio_type: this_s).first_or_create!(role: casting[0], cast_order: idx)
+                position: Position.find_by(code: 'A')).first_or_create!(role: casting[0],
+                                                                        cast_order: idx,
+                                                                        bio_type: s70_bt)
   end
 
 
@@ -62,8 +63,7 @@ merry_wives = Production.where(company: s70,
 ].each do |casting|
   Casting.where(member: Member.where(first_name: casting[1], last_name: casting[2]).first_or_create!,
                 production: merry_wives,
-                position: Position.find_by(description: casting[0]),
-                bio_type: this_s).first_or_create!
+                position: Position.find_by(description: casting[0])).first_or_create!(bio_type: s70_bt)
 end
 
 merry_wives.update(has_all_data: 'Y')
