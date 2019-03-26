@@ -7,7 +7,8 @@ class AddMacbethData < ActiveRecord::Migration[5.1]
     macbeth = Production.where(company: s70,
                                venue: kelsey,
                                title: 'Macbeth',
-                               year: 2019).first_or_create!
+                               year: 2019).first_or_create!(start_date: '21/06/2019'.to_date,
+                                                            end_date: '30/06/2019'.to_date)
 
     cast.each_with_index do |casting, idx|
       Casting.where(member: Member.where(first_name: casting[1],

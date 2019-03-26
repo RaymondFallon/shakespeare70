@@ -3,7 +3,7 @@
   .row
     .col-12
       %hr
-      %h1.ruslan.text-center #{@production.title} (#{@production.year})
+      %h1.mt-4.ruslan.text-center #{@production.title} (#{@production.year})
       %hr
 
 .container-fluid
@@ -12,7 +12,7 @@
       - if @production.start_date && @production.end_date
         = render partial: 'purchase_details', locals: { production: @production }
       = render partial: 'cast_list', locals: { production: @production }
-      - unless @production.has_all_data?
+      - unless @production.has_all_data? || @production.title == 'Macbeth' # TODO: Remove Macbeth logic
         %p
           This cast list may be incomplete...
           %em For Now!
