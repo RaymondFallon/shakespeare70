@@ -13,5 +13,6 @@ class StaticPagesController < ApplicationController
 
   def welcome
     @clybourne = Production.find_by(title: 'Clybourne Park')
+    @macbeth = Production.find_by(title: 'Macbeth')
   end
 end
