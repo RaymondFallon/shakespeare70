@@ -25,7 +25,7 @@ class Member < ApplicationRecord
 
   def random_photos(count)
     appearances = castings.map(&:photo_appearances)&.flatten
-    return if appearances.empty?
+    return [] if appearances.empty?
 
     appearances.sample(count).map(&:photo)
   end
