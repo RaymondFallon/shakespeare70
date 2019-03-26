@@ -19,7 +19,7 @@ co_dir =   Position.where(code: 'CO', description: 'Co-Director').first_or_creat
 a_dir =    Position.where(code: 'AD', description: 'Assistant Director').first_or_create!
 
 [
-  [this_s, a_dir, 'The Merry Wives of Windsor'],
+  [s70_bt, a_dir, 'The Merry Wives of Windsor'],
 
   [s70_bt, actor, 'Murder Most Foul: An Evening of Shakespeare', 'Ensemble'],
   [s70_bt, co_dir, 'Murder Most Foul: An Evening of Shakespeare'],

@@ -23,7 +23,7 @@ pa =       Position.where(code: 'PA', description: 'Production Assistant').first
 intern =   Position.where(code: 'I', description: 'Intern').first_or_create!
 
 [
-  [this_s, sm, 'The Merry Wives of Windsor'],
+  [s70_bt, sm, 'The Merry Wives of Windsor'],
 
   [s70_bt, sm, 'Measure For Measure'],
   [s70_bt, director, 'The Heidi Chronicles'],
