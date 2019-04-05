@@ -1,3 +1,4 @@
+@import 'color_variables';
 
 #s70-header {
   position: sticky;
@@ -7,11 +8,11 @@
   max-width: none;
   box-shadow: 2px 2px 20px grey;
 
-  background-color: black;
+  background-color: $header-bg-color;
 }
 
 #header-inner .h2 a{
-  color: goldenrod;
+  color: $color2;
 }
 
 #header-inner {
@@ -76,7 +77,7 @@ i.menu-toggle {
   nav ul {
     display: block;
     margin-bottom: 0;
-    color: goldenrod;
+    color: $color2;
   }
 
   nav ul li {

@@ -1,16 +1,17 @@
-$deep-grey: #4F4F4F;
+@import 'color_variables';
 
 html, body {
   margin: 0;
   height: 100%;
-  background-color: aliceblue !important;
+  background-color: $body-bg-color !important;
 }
 
 main {
   //background-color: $deep-grey;
   font-family: poppins;
   height: 100%;
-  background-color: aliceblue;
+  background-color: $body-bg-color;
+  color: $main-text-color;
 }
 
 p, ol, ul, td {
@@ -60,17 +61,17 @@ p, ol, ul, td {
 }
 
 .black {
-  color: black !important;
+  color: $color3 !important;
 }
 .black:hover {
-  color: black !important;
+  color: $color3 !important;
 }
 
 .goldenrod {
-  color: goldenrod !important;
+  color: $header-text-color !important;
 }
 .goldenrod:hover {
-  color: goldenrod !important;
+  color: $header-text-color !important;
 }
 
 .hover-shadow:hover {
@@ -78,7 +79,7 @@ p, ol, ul, td {
 }
 
 .deep-grey {
-  color: $deep-grey;
+  color: $main-text-color-light;
 }
 
 .white {
@@ -90,7 +91,7 @@ p, ol, ul, td {
 
 .red-hover:hover {
   color: red !important;
-  background-color: black;
+  background-color: $header-bg-color;
 }
 
 .hidden {
