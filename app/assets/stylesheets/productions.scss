@@ -32,11 +32,18 @@ ul.cast-list {
   transform: rotate(205deg);
 }
 
+.production-pill .img-fluid {
+  box-shadow: 5px 5px 16px rgba(0, 0, 0, .3) !important;
+}
+
 .production-pill:hover {
+
   .img-fluid {
     color: black;
     text-decoration: none;
-    box-shadow: 5px 5px 5px darkgrey !important;
+    box-shadow: 5px 5px 16px rgba(0, 0, 0, .3),
+                1px 1px 18px rgba(0, 0, 0, .35),
+                1px 1px 8px rgba(0, 0, 0, .5) !important;
   }
 
   .show-title {
