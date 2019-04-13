@@ -3,15 +3,16 @@
 .container#member-show-container
   .row.justify-content-sm-center
     .col-sm-10.offset-sm-1.col-md-5.offset-md-0
-      =image_tag @member.photo_url, class: 'img-fluid rounded-2r img-thumbnail',
+      =image_tag @member.photo_url, class: 'img-fluid rounded-2r elevation-6',
                             alt: "#{@member.name} Headshot"
       %h1.permanent-marker.card-title.text-right
         = '- ' + @member.name
-      %p.mb-1.permanent-marker.text-right= @member.title
+      -#%p.mb-1.permanent-marker.text-right= @member.title
       - if @member.ex_comm?
         %p.permanent-marker.text-right Executive Committee
     .col-sm-12.col-md-7
-      %p.deep-grey.card-text.text-center= @member.bio&.html_safe
+      %h4.h5.deep-grey{style: 'font-weight: 900;'}= @member.title
+      %p.card-text{style: 'padding-left: 2.3em;'}= @member.bio&.html_safe
       = render partial: 'bio_credits', locals: { member: @member }
 
 - if @photos.any?

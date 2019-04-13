@@ -5,16 +5,16 @@ $instagram-yellow: #fccc63;
 
 #facebook_icon:hover {
   color: white !important;
-  font-size: 2em;
+  //font-size: 2em;
 }
 
 #twitter_icon:hover {
   color: $twitter-blue !important;
-  font-size: 2em;
+  //font-size: 2em;
 }
 
 #instagram_icon:hover {
-  font-size: 2em;
+  //font-size: 2em;
   background: -webkit-linear-gradient($instagram-purple, $instagram-red, $instagram-yellow);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

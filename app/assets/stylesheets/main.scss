@@ -61,10 +61,10 @@ p, ol, ul, td {
 }
 
 .black {
-  color: $color3 !important;
+  color: $color4 !important;
 }
 .black:hover {
-  color: $color3 !important;
+  color: $color4 !important;
 }
 
 .goldenrod {
@@ -79,7 +79,7 @@ p, ol, ul, td {
 }
 
 .deep-grey {
-  color: $main-text-color-light;
+  color: $main-text-color-light !important;
 }
 
 .white {
@@ -90,8 +90,9 @@ p, ol, ul, td {
 }
 
 .red-hover:hover {
-  color: red !important;
+  color: yellow !important;
   background-color: $header-bg-color;
+  //box-shadow: 0 0 3px yellow;
 }
 
 .hidden {

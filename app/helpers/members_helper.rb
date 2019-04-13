@@ -19,11 +19,11 @@ module MembersHelper
 
   def other_company_text_or_link(production)
     company = production.company
-    return content_tag(:strong, " (#{company.name})", class: 'black') unless company.website_url
+    return content_tag(:strong, " (#{company.name})", class: 'deep-grey') unless company.website_url
 
     content_tag(:strong, link_to(" (#{company.name})",
                                  company.website_url,
-                                 class: 'black no-decoration hover-shadow',
+                                 class: 'deep-grey no-decoration hover-shadow',
                                  target: '_blank'))
   end
 end

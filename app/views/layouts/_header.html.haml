@@ -5,12 +5,11 @@
     %a#main-menu-close.hidden.pl-4
       %i.menu-toggle.fa.fa-2x.fa-close.goldenrod.mr-2.mt-2-half
     %h1.h2.ml-3.mb-0.mt-2.ruslan#s70-logo
-      =link_to "SHAKESPEARE '70", root_path, class: 'goldenrod red-hover mr-3', id: 's70-name'
+      =link_to "S70", root_path, class: 'goldenrod red-hover mr-3', id: 's70-name'
     %nav.row.mt-1.poppins#main-menu
       %ul
         %li.nav-item{ style: 'list-style-type:none;' }
-          %span{ class: 'no-decoration mr-4 goldenrod',
-                 id: 'under-dev-warnings',
+          %span{ class: 'no-decoration mr-4 goldenrod red-hover',
                  style: 'cursor:pointer;',
                  'data-toggle': 'modal',
                  'data-target': '#dev_modal' }

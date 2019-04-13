@@ -1,16 +1,18 @@
 
-$color1: #960D80; // #FF8114; // #2D4471;
-$color2: #F6F150; // #FFCFA5; // #E8E687;
-$color3: #5C158F; // #833D00; // #552B72;
-$color4: #A4CC12; // #833D00; // #AA8339;
+$color1:  #021D3E; //black;  // #960D80; // #FF8114; // #2D4471;
+$color2:  #80A8D7; //blue;  // #A4CC12; // #833D00; // #AA8339;
+$color3:  white; //white;  // #F6F150; // #FFCFA5; // #E8E687;
+$color4:  #021D3E; //black;  // #5C158F; // #833D00; // #552B72;
 
-
-$body-bg-color: $color2;
-$main-text-color: $color3;
-$main-text-color-light: lighten($color3, 20%);
 
 $header-bg-color: $color1;
-$header-text-color: $color4;
+$header-text-color: $color2;
+
+$body-bg-color: $color3;
+$main-text-color: #color4;
+//$main-text-color-light: black;
+$main-text-color-light: lighten($color4, 20%);
+
 
 
 

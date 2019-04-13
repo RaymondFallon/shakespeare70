@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$deep-grey: #646464;
+@import 'color_variables';
 
 h1, h2, h3, h4, h5 {
   font-family: 'Permanent Marker', serif;
@@ -33,18 +33,25 @@ h1, h2, h3, h4, h5 {
   border-radius: 2rem !important;
 }
 
-a.member-card {
-  color: #5F9700;
+.member-card a {
+  color: $color4;
 }
 
-a.member-card:hover {
-  color: #5F9700;
+.member-card a:hover {
+  color: $color4;
   background-color: white;
   text-decoration: none;
-  box-shadow: 7px 7px 7px darkgrey;
+}
+
+.member-card:hover {
+  box-shadow: 2px 2px 18px rgba(black, .50);
 }
 
 .casting_credit {
   padding-left: 1.5em;
   text-indent: -1.5em;
+}
+
+.polaroid-border {
+  border: 8px solid white !important;
 }

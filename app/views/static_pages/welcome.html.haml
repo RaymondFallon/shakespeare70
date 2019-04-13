@@ -2,25 +2,28 @@
   .row
     .col-12
       %hr
-      %h1.text-center.ruslan Shakespeare '70
+      %h1.text-center.ruslan.deep-grey Shakespeare '70
       %hr
 
 .container.text-center
   .row
-    .col-10.offset-1
-      %p= welcome_text1
-    .col-12
-      %hr
-    .col-8.offset-2.text-center
-      .h5
-        Shakespeare '70 is thrilled to announce its cast for
-        %em Macbeth,
-        coming to the Kelsey Theatre this June 21st - 30th!
-  .d-flex.flex-col.justify-content-around.mt-4
-    = link_to @macbeth, class: 'production-pill' do
-      = image_tag @macbeth.poster, class: 'img-fluid rounded-1r shadow-2',
-                                   style: 'max-width: 300px;',
-                                   alt: "#{@macbeth.title} Poster"
+    .col-12.col-md-6
+      .row
+        .col-10.offset-1
+          %p= welcome_text1
+        .col-12
+          %hr
+        .col-8.offset-2.text-center
+          .h5
+            Shakespeare '70 is thrilled to announce its cast for
+            %em Macbeth,
+            coming to the Kelsey Theatre this June 21st - 30th!
+    .col-12.col-md-6
+      .d-flex.flex-col.justify-content-around.mt-4
+        = link_to @macbeth, class: 'production-pill' do
+          = image_tag @macbeth.poster, class: 'img-fluid shadow-2',
+                                       style: 'max-width: 350px;',
+                                       alt: "#{@macbeth.title} Poster"
 
 
   .row

@@ -54,7 +54,7 @@ function setLargeHeader(){
     get_by_id('main-menu').classList.remove('hidden');
     get_by_id('main-menu-open').classList.add('hidden');
     get_by_id('main-menu-close').classList.add('hidden');
-    get_by_id('s70-name').text = "SHAKESPEARE '70"
+    get_by_id('s70-name').text = "S70"
 }
 
 function get_by_id(element_id){
