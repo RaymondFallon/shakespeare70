@@ -2615,7 +2615,7 @@ p, ol, ul, td {
 }
 
 /* line 91, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/main.scss */
-.red-hover:hover {
+.yellow-hover:hover {
   color: red !important;
   background-color: #5F9700;
 }
