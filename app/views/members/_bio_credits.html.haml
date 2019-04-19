@@ -1,5 +1,5 @@
 - if @member.castings.this_season.any?
-  %h4.ruslan This Season
+  %h2.h5.deep-grey{style: 'font-weight: 900;'} This Season
   %ul
     - @member.castings.this_season.group_by(&:production).each do |prod_casting_hash|
       = render partial: 's70_credit', locals: { production: prod_casting_hash.first,
@@ -8,13 +8,13 @@
   - if @member.castings.with_s70.selected.any?
     = render 's70_credits_list'
   - else
-    %h4.ruslan With S70
+    %h2.h5.deep-grey{style: 'font-weight: 900;'} With S70
     %ul
       - @member.castings.with_s70.group_by(&:production).each do |prod_casting_hash|
         = render partial: 's70_credit', locals: { production: prod_casting_hash.first,
                                                   castings: @member.castings.with_s70.where(production: prod_casting_hash.first) }
 - if @member.castings.with_others.any?
-  %h4.ruslan Other Companies
+  %h2.h5.deep-grey{style: 'font-weight: 900;'} Other Companies
   %ul
     - @member.castings.with_others.sort_by(&:company).group_by(&:production).each do |prod_casting_hash|
       = render partial: 'other_credit', locals: { production: prod_casting_hash.first,

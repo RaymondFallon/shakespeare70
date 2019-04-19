@@ -1,6 +1,6 @@
-.col-6.col-sm-4.col-md-3.col-lg-3.mt-3
-  .card.text-right
-    %a{href: member_path(member), class: 'member-card'}
+.col-6.col-sm-4.col-md-3.col-lg-3.my-3
+  .card.member-card.text-right.elevation-6.polaroid-border
+    %a{href: member_path(member)}
       =image_tag member.photo_url, class: 'card-img-top text-right', alt: "#{member.name} headshot"
-      .card-body{style: 'padding:1rem .5rem'}
+      .card-body
         %h2.h5.permanent-marker= "- #{member.name}"

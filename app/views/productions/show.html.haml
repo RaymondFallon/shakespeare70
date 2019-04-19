@@ -3,7 +3,7 @@
   .row
     .col-12
       %hr
-      %h1.mt-4.ruslan.text-center #{@production.title} (#{@production.year})
+      %h1.mt-4.ruslan.text-center.deep-grey #{@production.title} (#{@production.year})
       %hr
 
 .container-fluid
@@ -19,7 +19,7 @@
       - if @production.venue
         %strong= @production.venue.name
     .col-10.offset-1.col-sm-4.offset-sm-1.mb-2
-      = image_tag @production.poster, class: 'img-fluid', alt: "#{@production.title} Poster"
+      = image_tag @production.poster, class: 'img-fluid elevation-2', alt: "#{@production.title} Poster"
 
 - if @photos.any?
   = render partial: 'shared/photo_block', locals: { photos: @photos }

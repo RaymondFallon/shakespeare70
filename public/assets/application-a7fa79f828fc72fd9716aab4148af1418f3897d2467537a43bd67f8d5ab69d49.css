@@ -2384,92 +2384,93 @@
   z-index: 1000;
   width: 100%;
   max-width: none;
-  background-color: black;
+  box-shadow: 2px 2px 20px grey;
+  background-color: #5F9700;
 }
 
-/* line 12, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
+/* line 13, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
 #header-inner .h2 a {
   color: goldenrod;
 }
 
-/* line 16, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
+/* line 17, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
 #header-inner {
   margin-left: 0;
   margin-right: 0;
 }
 
-/* line 21, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
+/* line 22, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
 #under-dev-warnings:hover {
   color: lawngreen !important;
 }
 
-/* line 25, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
+/* line 26, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
 .h2 a:hover {
   background-color: transparent;
   text-decoration: none;
 }
 
-/* line 30, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
+/* line 31, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
 nav ul {
   display: block;
   margin-bottom: 0;
   padding-left: 0;
 }
 
-/* line 37, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
+/* line 38, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
 nav ul li {
   display: inline-block;
   padding: 0 1em;
   line-height: 3em;
 }
 
-/* line 43, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
+/* line 44, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
 nav ul li a:hover {
   background-color: lightblue;
   text-decoration: none;
 }
 
-/* line 48, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
+/* line 49, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
 #main-menu {
   margin-left: auto;
   margin-right: 25px;
 }
 
-/* line 53, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
+/* line 54, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
 #main-menu-open {
   display: none;
 }
 
-/* line 57, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
+/* line 58, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
 i.menu-toggle {
   cursor: pointer;
 }
 
 @media (max-width: 50em) {
-  /* line 62, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
+  /* line 63, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
   #s70-logo {
     margin-left: .5rem !important;
   }
 
-  /* line 66, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
+  /* line 67, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
   #main-menu {
     width: 90%;
     padding-left: 2rem;
   }
 
-  /* line 71, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
+  /* line 72, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
   #main-menu-open {
     display: inline-block;
   }
 
-  /* line 75, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
+  /* line 76, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
   nav ul {
     display: block;
     margin-bottom: 0;
     color: goldenrod;
   }
 
-  /* line 81, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
+  /* line 82, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
   nav ul li {
     display: list-item;
     padding: 0 1em;
@@ -2478,7 +2479,7 @@ i.menu-toggle {
   }
 }
 @media (min-width: 50em) {
-  /* line 91, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
+  /* line 92, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/header/header.scss */
   .menu-toggle {
     display: none;
   }
@@ -2506,14 +2507,14 @@ i.menu-toggle {
 html, body {
   margin: 0;
   height: 100%;
-  background-color: aliceblue !important;
+  background-color: #AAA839 !important;
 }
 
 /* line 9, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/main.scss */
 main {
   font-family: poppins;
   height: 100%;
-  background-color: aliceblue;
+  background-color: #AAA839;
 }
 
 /* line 16, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/main.scss */
@@ -2575,22 +2576,22 @@ p, ol, ul, td {
 
 /* line 62, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/main.scss */
 .black {
-  color: black !important;
+  color: #5F9700 !important;
 }
 
 /* line 65, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/main.scss */
 .black:hover {
-  color: black !important;
+  color: #5F9700 !important;
 }
 
 /* line 69, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/main.scss */
 .goldenrod {
-  color: goldenrod !important;
+  color: #AA8339 !important;
 }
 
 /* line 72, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/main.scss */
 .goldenrod:hover {
-  color: goldenrod !important;
+  color: #AA8339 !important;
 }
 
 /* line 76, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/main.scss */
@@ -2616,7 +2617,7 @@ p, ol, ul, td {
 /* line 91, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/main.scss */
 .yellow-hover:hover {
   color: red !important;
-  background-color: black;
+  background-color: #5F9700;
 }
 
 /* line 96, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/main.scss */
@@ -2665,12 +2666,12 @@ h1, h2, h3, h4, h5 {
 
 /* line 36, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/members.scss */
 a.member-card {
-  color: black;
+  color: #5F9700;
 }
 
 /* line 40, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/members.scss */
 a.member-card:hover {
-  color: black;
+  color: #5F9700;
   background-color: white;
   text-decoration: none;
   box-shadow: 7px 7px 7px darkgrey;
@@ -2681,23 +2682,23 @@ a.member-card:hover {
   padding-left: 1.5em;
   text-indent: -1.5em;
 }
-/* line 5, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/productions.scss */
+/* line 6, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/productions.scss */
 ul.cast-list {
   list-style: none;
 }
 
-/* line 9, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/productions.scss */
+/* line 10, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/productions.scss */
 .member-link {
   text-decoration: none;
 }
-/* line 12, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/productions.scss */
+/* line 13, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/productions.scss */
 .member-link :hover {
-  background-color: aliceblue;
+  background-color: #AAA839;
   text-decoration: none;
   text-shadow: 1px 1px lightgrey;
 }
 
-/* line 19, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/productions.scss */
+/* line 20, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/productions.scss */
 .fa-rotate-155 {
   -webkit-transform: rotate(155deg);
   -moz-transform: rotate(155deg);
@@ -2706,7 +2707,7 @@ ul.cast-list {
   transform: rotate(155deg);
 }
 
-/* line 27, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/productions.scss */
+/* line 28, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/productions.scss */
 .fa-rotate-205 {
   -webkit-transform: rotate(205deg);
   -moz-transform: rotate(205deg);
@@ -2716,34 +2717,23 @@ ul.cast-list {
 }
 
 /* line 36, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/productions.scss */
+.production-pill .img-fluid {
+  box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* line 42, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/productions.scss */
 .production-pill:hover .img-fluid {
   color: black;
   text-decoration: none;
-  box-shadow: 5px 5px 5px darkgrey;
+  box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.3), 1px 1px 18px rgba(0, 0, 0, 0.35), 1px 1px 8px rgba(0, 0, 0, 0.5) !important;
 }
-/* line 42, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/productions.scss */
+/* line 50, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/productions.scss */
 .production-pill:hover .show-title {
   text-shadow: 1px 1px lightgrey;
 }
 /* line 5, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/welcome.scss */
-#welcome-header {
-  font-size: 5em;
-}
-
-/* line 8, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/welcome.scss */
-#welcome-body {
-  padding-top: 3em;
-}
-
-/* line 13, /Users/rfallon/non_gitlab_projects/shakespeare70/app/assets/stylesheets/welcome.scss */
-#welcome-page {
-  width: 100%;
-  height: 100%;
-  background: url(/assets/stock_photos/ancient-architecture-art-189532-4dbaddc12a28da063b8a67fe4dc640fad07e98448610289dba308f267878dd31.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.shadow-2 {
+  box-shadow: 2px 2px 2px darkgrey;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -2762,4 +2752,3 @@ ul.cast-list {
 
 
  */
-

@@ -1,6 +1,7 @@
 // Place all the styles related to the Productions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'color_variables';
 
 ul.cast-list {
   list-style: none;
@@ -10,7 +11,7 @@ ul.cast-list {
   text-decoration: none;
 
   :hover {
-    background-color: aliceblue;
+    background-color: $body-bg-color;
     text-decoration: none;
     text-shadow: 1px 1px lightgrey;
   }
@@ -33,7 +34,7 @@ ul.cast-list {
 }
 
 .production-pill .img-fluid {
-  box-shadow: 5px 5px 16px rgba(0, 0, 0, .3) !important;
+  //box-shadow: 5px 5px 16px rgba(0, 0, 0, .3) !important;
 }
 
 .production-pill:hover {

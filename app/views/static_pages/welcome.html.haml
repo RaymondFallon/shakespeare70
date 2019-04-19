@@ -2,25 +2,22 @@
   .row
     .col-12
       %hr
-      %h1.text-center.ruslan Shakespeare '70
+      %h1.text-center.ruslan.deep-grey Shakespeare '70
       %hr
 
 .container.text-center
   .row
-    .col-10.offset-1
-      %p= welcome_text1
-    .col-12
-      %hr
-    .col-8.offset-2.text-center
-      .h5
+    .col-8.offset-2
+      .h5.inline-block
         Shakespeare '70 is thrilled to announce its cast for
         %em Macbeth,
         coming to the Kelsey Theatre this June 21st - 30th!
-  .d-flex.flex-col.justify-content-around.mt-4
-    = link_to @macbeth, class: 'production-pill' do
-      = image_tag @macbeth.poster, class: 'img-fluid rounded-1r shadow-2',
-                                   style: 'max-width: 300px;',
-                                   alt: "#{@macbeth.title} Poster"
+    .col-12
+      .d-flex.flex-col.justify-content-around.mt-4
+        = link_to @macbeth, class: 'production-pill' do
+          = image_tag @macbeth.poster, class: 'img-fluid elevation-4',
+                                       style: 'max-width: 50%;',
+                                       alt: "#{@macbeth.title} Poster"
 
 
   .row
@@ -31,13 +28,13 @@
   .row
     .col-12.col-md-5
       = image_tag 'productions/clybourne_park/what.jpg',
-                  class: 'img-fluid rounded-1r mt-2 mb-2'
+                  class: 'img-fluid rounded-1r elevation-4 mt-2 mb-2'
     .col-4.offset-4.col-md-2.offset-md-0.production-pill
       = link_to @clybourne do
-        = image_tag @clybourne.poster, class: 'img-fluid rounded-1r my-4',
+        = image_tag @clybourne.poster, class: 'img-fluid elevation-4 rounded-1r my-4',
                                        alt: "#{@clybourne.title} Poster"
     .col-12.col-md-5
       = image_tag 'productions/clybourne_park/now_wait.jpg',
-                  class: 'img-fluid rounded-1r mt-2 mb-2'
+                  class: 'img-fluid rounded-1r elevation-4 mt-2 mb-2'
     .col-12
       %hr

@@ -1,17 +1,16 @@
 %header#s70-header
   #header-inner.row.justify-content-between
     %a#main-menu-open.hidden.pl-4
-      %i.menu-toggle.fa.fa-2x.fa-bars.goldenrod.mr-2.mt-2-half
+      %i.menu-toggle.fa.fa-2x.fa-bars.goldenrod.yellow-hover.mr-2.mt-2-half
     %a#main-menu-close.hidden.pl-4
-      %i.menu-toggle.fa.fa-2x.fa-close.goldenrod.mr-2.mt-2-half
+      %i.menu-toggle.fa.fa-2x.fa-close.goldenrod.yellow-hover.mr-2.mt-2-half
     %h1.h2.ml-3.mb-0.mt-2.ruslan#s70-logo
-      =link_to "SHAKESPEARE '70", root_path, class: 'goldenrod red-hover mr-3', id: 's70-name'
+      =link_to "S70", root_path, class: 'goldenrod yellow-hover mr-3', id: 's70-name'
     %nav.row.mt-1.poppins#main-menu
       %ul
         %li.nav-item{ style: 'list-style-type:none;' }
-          %span{ class: 'no-decoration mr-4',
-                 id: 'under-dev-warnings',
-                 style: 'cursor:pointer; color:red;',
+          %span{ class: 'no-decoration mr-4 goldenrod yellow-hover',
+                 style: 'cursor:pointer;',
                  'data-toggle': 'modal',
                  'data-target': '#dev_modal' }
             %i.fa.fa-exclamation-triangle{ 'aria-hidden': 'true' }
@@ -21,16 +20,16 @@
           = render partial: 'layouts/social_media_btns'
         -#%li.collection.nav-item.inline-block= link_to 'Coming Soon',
         -#                                              clybourne_page,
-        -#                                              class: 'goldenrod red-hover'
+        -#                                              class: 'goldenrod yellow-hover'
         %li.collection.nav-item.inline-block= link_to 'Bios',
                                                       members_path,
-                                                      class: 'goldenrod red-hover'
+                                                      class: 'goldenrod yellow-hover'
         %li.collection.nav-item.inline-block= link_to 'Shows',
                                                       productions_path,
-                                                      class: 'goldenrod red-hover'
+                                                      class: 'goldenrod yellow-hover'
         %li.collection.nav-item.inline-block= link_to 'Community',
                                                       community_path,
-                                                      class: 'goldenrod red-hover'
+                                                      class: 'goldenrod yellow-hover'
         %li.collection.nav-item.inline-block= link_to 'Donate',
                                                       donations_path,
-                                                      class: 'goldenrod red-hover'
+                                                      class: 'goldenrod yellow-hover'
