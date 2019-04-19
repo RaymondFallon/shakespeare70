@@ -1,5 +1,5 @@
 
-%div.casting_credit
+%li.casting_credit
   %em= link_to("#{production.title}:", production, class: 'deep-grey no-decoration hover-shadow mr-2')
   - castings.acting_gig.each do |casting|
     = casting.role + (castings.size > 1 ? ',' : '' )
