@@ -54,4 +54,14 @@ h1, h2, h3, h4, h5 {
 
 .polaroid-border {
   border: 8px solid white !important;
+
+  .card-body {
+    padding: .5rem .25rem .5rem .25rem;
+  }
+}
+
+@media (min-width: 1140px) {
+  .polaroid-border .card-body {
+    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+  }
 }
