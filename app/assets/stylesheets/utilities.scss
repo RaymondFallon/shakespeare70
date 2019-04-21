@@ -1,4 +1,10 @@
 
-.border-none {
+.max-w-120 {
+  max-width: 120px;
+}
 
+@media (min-width: 768px) {
+  .md\:max-w-180 {
+    max-width: 180px;
+  }
 }

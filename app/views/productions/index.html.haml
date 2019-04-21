@@ -15,8 +15,7 @@
                 .row
                   .col-12
                     = link_to production do
-                      =image_tag production.poster, class: 'img-fluid elevation-4',
-                                                    style: 'max-width: 180px',
+                      =image_tag production.poster, class: 'elevation-4 max-w-120 md:max-w-180',
                                                     alt: "#{production.title} Poster"
                   .col-12
                     = link_to production.title, production, class: 'show-title no-decoration black'
