@@ -5,19 +5,19 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem 'bootstrap'
+gem 'coffee-rails', '~> 4.2'
+gem 'font-awesome-rails'
+gem 'haml-rails'
+gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails'
 gem 'rails', '~> 5.1.6'
 gem 'pg'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-# gem 'therubyracer', platforms: :ruby
-gem 'coffee-rails', '~> 4.2'
+# gem 'therubyracer'
 gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.5'
-gem 'jquery-rails'
-gem 'haml-rails'
-gem 'font-awesome-rails'
+gem 'uglifier', '>= 1.3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
