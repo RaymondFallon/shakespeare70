@@ -5,3 +5,18 @@
 .shadow-2 {
   box-shadow: 2px 2px 2px darkgrey;
 }
+
+.bg-welcome-img {
+  background-image: url('s70_photos/heath_day.jpg');
+  background-size: cover;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  //width: 600px;
+}
+
+#welcome-title {
+  //background-color: rgba(100, 100, 0, .6);
+  //display: inline-block;
+  //border-radius: 3px;
+  filter: drop-shadow(0 0 10px yellow);
+}
