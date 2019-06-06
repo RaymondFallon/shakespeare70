@@ -10,9 +10,9 @@
 
 // Values for shadows are based on values from https://material.io/guidelines/resources/shadows.html#shadows-sketch however this doesn't include all values and some of them look strange in css so changes were made when necessary, e.g. the original values for elevation 12 on the material guidelines site make a for a real strange dark shadow.
 
-$key-shadow-umbra-colour:    rgba(black, .14);
-$key-shadow-penumbra-colour: rgba(black, .12);
-$ambient-shadow-colour:      rgba(black, .20);
+$key-shadow-umbra-colour:    rgba(black, .64);
+$key-shadow-penumbra-colour: rgba(black, .62);
+$ambient-shadow-colour:      rgba(black, .70);
 
 $key-shadow-umbra-map: (
         0:  0  0    0   0   $key-shadow-umbra-colour,

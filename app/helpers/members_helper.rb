@@ -18,6 +18,7 @@ module MembersHelper
   # end
 
   def other_company_text_or_link(production)
+    # TODO: replace with `link_to_if`
     company = production.company
     return content_tag(:strong, " (#{company.name})", class: 'deep-grey') unless company.website_url
 
