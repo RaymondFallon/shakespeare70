@@ -1,15 +1,15 @@
 #purchase-details
-  %h4.mt-1
+  .h5.poppins.mt-1
     #{production.start_date.strftime("%b %e")} - #{production.end_date.strftime("%b %e, %Y")}
   %p.mb-1=production.schedule_desc
   - if production.venue
     .h4.mb-3= production.venue.name
-    -#%p.mb-0= production.venue.street_address
-    -#%p.mb-0= production.venue.suite_address if production.venue.suite_address
-    -#%p #{production.venue.town}, #{production.venue.state} #{production.venue.zipcode}
-  -#= button_tag 'Purchase Tickets',
-  -#             class: 'btn btn-primary mb-2 white',
-  -#             id: 'purchase-tix-btn',
-  -#             style: 'cursor:pointer; color:red;',
-  -#             'data-toggle': 'modal',
-  -#             'data-target': '#price-warning-modal'
+    %p.mb-0= production.venue.street_address
+    %p.mb-0= production.venue.suite_address if production.venue.suite_address
+    %p #{production.venue.town}, #{production.venue.state} #{production.venue.zipcode}
+  = button_tag 'Purchase Tickets',
+               class: 'btn btn-primary mb-2 white',
+               id: 'purchase-tix-btn',
+               style: 'cursor:pointer; color:red;',
+               'data-toggle': 'modal',
+               'data-target': '#price-warning-modal'

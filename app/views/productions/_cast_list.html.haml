@@ -1,20 +1,25 @@
-.d-flex.justify-content-between{ 'aria-hidden': 'true' }
-  = lightbulb_icon(155)
-  = lightbulb_icon(180)
-  = lightbulb_icon(180)
-  = lightbulb_icon(180)
-  = lightbulb_icon(205)
+-#.d-flex.justify-content-between{ 'aria-hidden': 'true' }
+-#  = lightbulb_icon(155)
+-#  = lightbulb_icon(180)
+-#  = lightbulb_icon(180)
+-#  = lightbulb_icon(180)
+-#  = lightbulb_icon(205)
+%h2.h4.poppins Cast
 %ul.cast-list.mt-3.p-0
   - production.cast_list.each do |casting|
     %li
       .container-fluid
         .row
-          .col-6.text-right #{casting.role}
-          .col-6.text-left.member-link= link_to casting.member.name, casting.member
+          - if casting.role.blank?
+            .col-12.text-center= link_to casting.member.name, casting.member
+          - else
+            .col-6.text-right #{casting.role}
+            .col-6.text-left.member-link= link_to casting.member.name, casting.member
 
 .row
   .col-8.offset-2
     %hr.m-0
+%h2.h4.mt-2.poppins Crew
 %ul.cast-list.mt-3.p-0
   - production.pro_staff.each do |casting|
     %li
