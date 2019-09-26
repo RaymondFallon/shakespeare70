@@ -11,7 +11,7 @@
       - if @member.ex_comm?
         %p.permanent-marker.text-right Executive Committee
     .col-sm-12.col-md-7
-      %h2.h5.deep-grey{style: 'font-weight: 900;'}= @member.title
+      %h2.poppins.h5{style: 'font-weight: 900;'}= @member.title
       %p.card-text{style: 'padding-left: 2.3em;'}= @member.bio&.html_safe
       = render partial: 'bio_credits', locals: { member: @member }
 

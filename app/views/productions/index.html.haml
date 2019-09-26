@@ -1,4 +1,4 @@
-%h1.m-4.text-center.ruslan.deep-grey A Recent History
+%h1.m-4.text-center.poppins A Recent History
 
 .container
   - @productions.keys.each_with_index do |year, idx|
@@ -6,7 +6,7 @@
       %hr
     .row
       .col-12.col-md-3.text-center.align-self-center
-        %h2.inline-block.deep-grey= year
+        %h2.poppins.inline-block= year
       .col-12.col-md-7.offset-md-1
         .row.justify-content-around
           - @productions[year].each do |production|
