@@ -31,8 +31,6 @@ richard.update(start_date: '16/10/2019',
                                                                         bio_type: this_bt)
 end
 
-
-
 [ # Pro-staff
   ['Director', 'Curt', 'Foxworth'],
   ['Assistant Director', 'Amanda', 'McCarther'],
