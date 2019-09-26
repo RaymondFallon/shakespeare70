@@ -8,7 +8,7 @@
     %p.mb-0= production.venue.suite_address if production.venue.suite_address
     %p #{production.venue.town}, #{production.venue.state} #{production.venue.zipcode}
   = button_tag 'Purchase Tickets',
-               class: 'btn btn-primary mb-2 white',
+               class: 'btn btn-danger mb-2 white',
                id: 'purchase-tix-btn',
                style: 'cursor:pointer; color:red;',
                'data-toggle': 'modal',

@@ -11,10 +11,12 @@
       .container-fluid
         .row
           - if casting.role.blank?
-            .col-12.text-center= link_to casting.member.name, casting.member
+            .col-12.text-center
+              = link_to casting.member.name, casting.member, class: 'deep-grey'
           - else
             .col-6.text-right #{casting.role}
-            .col-6.text-left.member-link= link_to casting.member.name, casting.member
+            .col-6.text-left.member-link
+              = link_to casting.member.name, casting.member, class: 'deep-grey'
 
 .row
   .col-8.offset-2
@@ -26,4 +28,5 @@
       .container-fluid
         .row
           .col-6.text-right #{casting.position.description}
-          .col-6.text-left.member-link= link_to casting.member.name, casting.member
+          .col-6.text-left.member-link
+            = link_to casting.member.name, casting.member, class: 'deep-grey'

@@ -5,13 +5,13 @@ $color3:  white; //white;  // #F6F150; // #FFCFA5; // #E8E687;
 $color4:  #021D3E; //black;  // #5C158F; // #833D00; // #552B72;
 
 
-$header-bg-color: $color1;
-$header-text-color: $color2;
+$header-bg-color: #0f0f0f; // $color1;
+$header-text-color: #d40000; // $color2;
 
 $body-bg-color: $color3;
 $main-text-color: #color4;
 //$main-text-color-light: black;
-$main-text-color-light: lighten($color4, 20%);
+$main-text-color-light: #6e0000;
 
 
 
