@@ -1,25 +1,13 @@
 .container
   .row
     .col-12
-      -#%hr
       %h1.text-center.poppins.my-4 Shakespeare 70
-      -#%hr
-
-.container.text-center.mt-4
-  .row
-    .col-10.offset-1.col-md-4.offset-1
-      = link_to @richard do
-        = image_tag @richard.poster, class: 'img-fluid elevation-2', alt: "#{@richard.title} Poster"
-    .col-10.offset-1.col-md-4.offset-1.align-self-center
-      %h2.h3.poppins Up Next:
-      %strong.h5 Richard III
-      .row.mt-4
-        .col-12
-          = button_tag 'Purchase Tickets',
-                       class: 'btn btn-danger mb-2 white',
-                       id: 'purchase-tix-btn',
-                       style: 'cursor:pointer; color:red;',
-                       'data-toggle': 'modal',
-                       'data-target': '#price-warning-modal'
-
-= render partial: 'productions/price_warning_modal'
+    .col-12
+      = render partial: 'components/card_with_side_image',
+               locals: { image_path: 'https://drive.google.com/uc?export=view&id=1zH0llbL2CWL0FcFG66oi9XEPRHvwo-kS',
+                         img_right: true,
+                         body: welcome_text1 }
+    .col-12
+      %blockquote.blockquote
+        %p.font-weight-bold
+          In Annie Baker's enigmatic and entertaining The Antipodes ("endlessly fascinating…" -- the NY Times) eight people brainstorm ideas for a story -- for a movie?  a TV pilot??  That's never revealed, but as one story leads to another more super-natural one, more is revealed and less is certain about these story-tellers. A great ensemble play about the how and the why of story-telling, and communication in general.
