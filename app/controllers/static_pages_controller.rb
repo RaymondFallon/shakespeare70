@@ -11,7 +11,22 @@ class StaticPagesController < ApplicationController
 
   def auditions; end
 
-  def welcome
-    @richard = Production.find_by(title: 'Richard III')
+  def welcome; end
+
+  def download_sides
+    file = Rails.root.join('app', 'assets', 'documents', 'Antipodes_auditions_sides.pdf')
+    File.open(file, 'r') do |f|
+      send_data f.read.force_encoding('BINARY'), filename: 'Antipodes_auditions_sides.pdf',
+                                                 type: 'application/pdf',
+                                                 disposition: 'attachment'
+    end
+  end
+
+  def view_sides
+    file = Rails.root.join('app', 'assets', 'documents', 'Antipodes_auditions_sides.pdf')
+    File.open(file, 'r') do |f|
+      send_data f.read.force_encoding('BINARY'), filename: 'Antipodes_auditions_sides.pdf',
+                                                 type: 'application/pdf'
+    end
   end
 end

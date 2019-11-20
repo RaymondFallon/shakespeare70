@@ -33,7 +33,8 @@ module WelcomeHelper
         'Sides and location information to be posted here.' +
         content_tag(:br) +
         'To arrange an audition time, or if you have a question, contact Producer Mike Krahel at ' +
-        mail_to('michael.krahel@gmail.com') + '.'
+        mail_to('michael.krahel@gmail.com') + '.' +
+        link_to('Download Sides', download_sides_path, class: 'btn btn-primary w-100 mt-2')
     )
   end
 end
