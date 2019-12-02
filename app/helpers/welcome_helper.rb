@@ -22,7 +22,7 @@ module WelcomeHelper
         " to be presented at TCNJ's Black Box March 25 - 29, 2020." +
         content_tag(:br) +
         content_tag(:strong, 'Auditions: ') +
-        ' Monday & Tuesday, Dec. 2nd & 3rd, 6 - 9:30 pm in Kendall Hall on the TCNJ campus.' +
+        ' Tuesday & Thursday, Dec. 3rd & 5th, 6 - 9:30 pm in Kendall Hall on the TCNJ campus.' +
         content_tag(:br) +
         content_tag(:strong, 'Seeking:') +
         content_tag(:ul, content_tag(:li, '1 performer who identifies as female, early to late 20s') +
