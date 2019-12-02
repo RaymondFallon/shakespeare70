@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get :community,            to: 'static_pages#community', as: :community
   get :donations,            to: 'static_pages#donations', as: :donations
   get :download_sides,       to: 'static_pages#download_sides', as: :download_sides
+  get :practice,             to: 'static_pages#practice', as: :practice
   get :view_sides,           to: 'static_pages#view_sides', as: :view_sides
 
   resources :members, only: [:index, :show] do

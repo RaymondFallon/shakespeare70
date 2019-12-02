@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
 class StaticPagesController < ApplicationController
-  def donations; end
-
-  def community; end
+  def auditions; end
 
   def black_box_directions; end
 
   def broken_link; end
 
-  def auditions; end
+  def community; end
+
+  def donations; end
 
   def welcome; end
 
@@ -20,6 +20,11 @@ class StaticPagesController < ApplicationController
                                                  type: 'application/pdf',
                                                  disposition: 'attachment'
     end
+  end
+
+  def practice
+    file = Rails.root.join('lib', 'scripts', 'antipodes.txt')
+    @lines = File.open(file, 'r').to_a
   end
 
   def view_sides

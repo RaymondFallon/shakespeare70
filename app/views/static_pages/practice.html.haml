@@ -1,0 +1,29 @@
+.container{ data: { controller: 'line-learner',
+                    'line-learner-index': 0 }}
+  .row
+    .col-12
+      #script-area.mt-4
+        .card.h-100
+          .card-header
+            %h1.poppins.h3 Antipodes Rehearsal Space
+          .card-body.overflow-auto(data-target='line-learner.output')
+          .card-footer.form-row
+            .col-10
+              = text_field_tag :user_input,
+                               nil,
+                               data: { target: 'line-learner.input'},
+                               class: 'inline-block form-control'
+            .col-2
+              %button.btn.btn-primary.inline-block.w-100(data-action='line-learner#readLine')
+                Submit
+
+  .hidden
+    - pattern = /##_(\w*)/i
+    - @lines.each_with_index do |line, idx|
+      - next if line.blank?
+      - if (match = pattern.match(line))
+        .character{data: { target: 'line-learner.char', 'line-index': idx }}
+          = match[1].strip # Character Name
+      - else
+        .line(data-target='line-learner.line' id="line-number-#{idx}")
+          = line
