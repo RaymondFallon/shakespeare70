@@ -19,6 +19,7 @@
 @import 'mixins/*';
 @import 'color_variables';
 @import 'donations';
+@import 'line_learner';
 @import 'main';
 @import 'members';
 @import 'positions';
@@ -26,3 +27,7 @@
 @import 'utilities';
 @import 'venues';
 @import 'welcome';
+
+#dm1_speech {
+  font-size: 24px;
+}
