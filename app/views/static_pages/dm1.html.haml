@@ -1,0 +1,9 @@
+.container{ data: { controller: 'dm1',
+                    'dm1-index': 0 }}
+  .row.mt-4
+    .col-12
+      = text_area_tag :dm1_speech, nil, 'data-action': 'keydown->dm1#printNextLetter',
+                                        'data-target': 'dm1.output',
+                                        cols: 80,
+                                        rows: 30
+

@@ -22,6 +22,10 @@ class StaticPagesController < ApplicationController
     end
   end
 
+  def dm1
+    render :dm1, layout: 'no_header'
+  end
+
   def practice
     file = Rails.root.join('lib', 'scripts', 'antipodes.txt')
     @lines = File.open(file, 'r').to_a
